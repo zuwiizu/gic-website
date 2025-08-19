@@ -1,0 +1,5 @@
+# Cloudflare development variables
+# Copy this file to .dev.vars and fill in your actual values
+
+TURNSTILE_SECRET_KEY=your-turnstile-secret-key
+WEBHOOK_URL=your-webhook-url-for-notifications

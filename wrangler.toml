@@ -1,0 +1,87 @@
+name = "gic-website"
+compatibility_date = "2024-08-18"
+compatibility_flags = ["nodejs_compat"]
+
+# Pages configuration
+pages_build_output_dir = "out"
+
+[env.production]
+name = "gic-website"
+
+[env.staging]
+name = "gic-website-staging"
+
+# KV namespace for contact form submissions
+[[kv_namespaces]]
+binding = "GIC_CONTACT"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+# Environment variables (set these in Cloudflare dashboard)
+[vars]
+ENVIRONMENT = "production"
+NODE_ENV = "production"
+
+# Build configuration
+[build]
+command = "npm run pages:build"
+cwd = "."
+
+# Headers for security and performance
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+for = "*.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.css"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.woff2"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.jpg"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.png"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.webp"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "*.avif"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirects
+[[redirects]]
+from = "/home"
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/blog/*"
+to = "/insights/:splat"
+status = 301
+
+# For development, create a .dev.vars file with:
+# TURNSTILE_SECRET_KEY=your-secret-key
+# WEBHOOK_URL=your-webhook-url
