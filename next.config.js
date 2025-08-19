@@ -41,4 +41,5 @@ const nextConfig = {
 
 
 
+// Trigger deployment - Updated on 2025-08-19
 module.exports = nextConfig;
