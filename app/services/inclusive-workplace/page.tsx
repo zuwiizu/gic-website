@@ -1,13 +1,400 @@
+import Link from 'next/link';
+import { Button } from '../../../components/ui/button';
+import { Breadcrumb } from '../../../components/ui/breadcrumb';
+import { StructuredData } from '../../../components/StructuredData';
+import { 
+  Building, 
+  CheckCircle, 
+  TrendingUp, 
+  Users, 
+  Clock,
+  MapPin,
+  Star,
+  ArrowRight,
+  Target,
+  BarChart3,
+  Award
+} from 'lucide-react';
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Inclusive Workplace Programs",
+  "description": "Comprehensive workplace transformation programs that attract top talent, reduce turnover by 41%, and boost innovation metrics by 28% through strategic culture development and leadership coaching.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Global Insights Collective",
+    "url": "https://globalinsightscollective.com"
+  },
+  "areaServed": ["United States", "Canada"],
+  "serviceType": "Workplace Culture Development",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock"
+  }
+};
+
+export const metadata = {
+  title: 'Corporate Training & Team Development | Global Insights Collective',
+  description: 'Professional training programs that improve team performance, reduce turnover, and boost productivity through practical skills development.',
+  keywords: 'corporate training, team development, leadership training, workplace communication, professional development, business training',
+  openGraph: {
+    title: 'Corporate Training That Gets Results',
+    description: 'Practical training programs that improve team performance and reduce turnover.',
+  }
+};
+
 export default function InclusiveWorkplace() {
   return (
-    <section className="max-w-4xl mx-auto py-16 px-4">
-      <h1 className="text-3xl font-bold mb-4 text-gray-900">Inclusive Workplace Programs</h1>
-      <p className="text-lg text-gray-700 mb-4">
-        We partner with employers to create inclusive workplace programmes that attract, retain and empower diverse talent. Our services range from policy reviews and leadership coaching to employee resource group development and inclusive recruitment strategies.
-      </p>
-      <p className="text-lg text-gray-700">
-        Programmes are grounded in data and tailored to your organisation’s needs. We measure progress using key metrics such as representation, sense of belonging and retention, and help you embed inclusion into every aspect of your business.
-      </p>
-    </section>
+    <>
+      <StructuredData data={serviceSchema} />
+      <div className="max-w-7xl mx-auto py-8 px-4">
+        {/* Breadcrumb */}
+        <Breadcrumb
+          items={[
+            { label: 'Services', href: '/services' },
+            { label: 'Inclusive Workplace Programs' }
+          ]}
+          className="mb-8"
+        />
+
+        {/* Hero Section */}
+        <section className="text-center mb-12 border-b pb-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Corporate Training & Strategy Consulting
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
+            Training programs, keynote speaking, strategic consulting, and leadership development that drives real business results.
+          </p>
+          <div className="flex justify-center gap-8 mb-6 text-sm text-gray-600">
+            <span>Corporate training</span>
+            <span>Keynote speaking</span>
+            <span>Strategy consulting</span>
+          </div>
+          <Button asChild>
+            <Link href="/contact">Get Started</Link>
+          </Button>
+        </section>
+
+        {/* Common Challenges */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Common Team Performance Challenges
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <ul className="space-y-3 text-gray-700">
+                <li>• Poor communication causing project delays</li>
+                <li>• Leadership skills gaps affecting team performance</li>
+                <li>• High turnover and difficulty retaining talent</li>
+                <li>• Conflicts and low team morale</li>
+                <li>• Lack of clear performance standards</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-3">Training Benefits:</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Improved team productivity and efficiency</li>
+                <li>• Better leadership and management skills</li>
+                <li>• Reduced turnover and recruitment costs</li>
+                <li>• Enhanced workplace communication</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Services */}
+        <section id="framework" className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            How We Help Your Organization
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="border border-gray-200 p-4">
+              <h3 className="font-semibold mb-2">Corporate Training</h3>
+              <p className="text-sm text-gray-600 mb-3">Workshops and programs that develop your team's skills and performance.</p>
+              <ul className="text-xs text-gray-600 space-y-1">
+                <li>• Leadership development</li>
+                <li>• Communication skills</li>
+                <li>• Team building</li>
+              </ul>
+            </div>
+            <div className="border border-gray-200 p-4">
+              <h3 className="font-semibold mb-2">Keynote Speaking</h3>
+              <p className="text-sm text-gray-600 mb-3">Inspiring presentations for conferences, events, and company meetings.</p>
+              <ul className="text-xs text-gray-600 space-y-1">
+                <li>• Conference keynotes</li>
+                <li>• Company events</li>
+                <li>• Industry panels</li>
+              </ul>
+            </div>
+            <div className="border border-gray-200 p-4">
+              <h3 className="font-semibold mb-2">Strategy Consulting</h3>
+              <p className="text-sm text-gray-600 mb-3">Strategic guidance to help organizations navigate complex challenges.</p>
+              <ul className="text-xs text-gray-600 space-y-1">
+                <li>• Organizational strategy</li>
+                <li>• Change management</li>
+                <li>• Performance optimization</li>
+              </ul>
+            </div>
+            <div className="border border-gray-200 p-4">
+              <h3 className="font-semibold mb-2">Executive Coaching</h3>
+              <p className="text-sm text-gray-600 mb-3">One-on-one coaching for leaders and high-potential employees.</p>
+              <ul className="text-xs text-gray-600 space-y-1">
+                <li>• Leadership coaching</li>
+                <li>• Executive development</li>
+                <li>• Career advancement</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Program Options */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Workplace Transformation Programs
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Culture Transformation */}
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-xl font-bold text-gray-900">Culture Transformation</h3>
+                <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span>
+              </div>
+              <p className="text-gray-700 mb-4">Comprehensive 12-month culture development program</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-sm">
+                  <Clock className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>12-month program</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <Users className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>Organization-wide</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <BarChart3 className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>Data-driven approach</span>
+                </div>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 mb-6">
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-600 mr-2" />Complete culture assessment</li>
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-600 mr-2" />Leadership development</li>
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-600 mr-2" />Policy and process redesign</li>
+              </ul>
+              <Button className="w-full">Start Transformation</Button>
+            </div>
+
+            {/* Leadership Coaching */}
+            <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Executive Leadership Coaching</h3>
+              <p className="text-gray-700 mb-4">Intensive coaching for senior leaders on performance-driven culture building</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-sm">
+                  <Clock className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>6-month intensive</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <Users className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>C-suite and senior leaders</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <Target className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>1:1 and group sessions</span>
+                </div>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 mb-6">
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-2" />Strategic culture planning</li>
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-2" />Performance management skills</li>
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-2" />Change leadership techniques</li>
+              </ul>
+              <Button variant="outline" className="w-full">Executive Program</Button>
+            </div>
+
+            {/* Rapid Assessment */}
+            <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Culture Assessment</h3>
+              <p className="text-gray-700 mb-4">Fast-track analysis to identify quick wins and strategic priorities</p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-sm">
+                  <Clock className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>30-day assessment</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <Users className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>All-hands participation</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <Award className="h-4 w-4 text-gray-500 mr-2" />
+                  <span>Actionable recommendations</span>
+                </div>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 mb-6">
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-blue-500 mr-2" />Baseline culture metrics</li>
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-blue-500 mr-2" />Benchmarking analysis</li>
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-blue-500 mr-2" />Quick-win identification</li>
+              </ul>
+              <Button variant="outline" className="w-full">Get Assessment</Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Focus Areas */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Where We Drive the Biggest Impact
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-xl border border-blue-200 hover:shadow-lg transition-shadow">
+              <TrendingUp className="h-8 w-8 text-blue-600 mb-4" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Talent Attraction</h3>
+              <p className="text-gray-600 text-sm mb-4">Become the employer that top performers actively seek out.</p>
+              <ul className="space-y-1 text-sm text-gray-700">
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Employer brand development</li>
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Recruitment process optimization</li>
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Value proposition clarity</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl border border-green-200 hover:shadow-lg transition-shadow">
+              <Users className="h-8 w-8 text-green-600 mb-4" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Team Performance</h3>
+              <p className="text-gray-600 text-sm mb-4">Unlock the full potential of diverse teams working together.</p>
+              <ul className="space-y-1 text-sm text-gray-700">
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Collaboration frameworks</li>
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Communication optimization</li>
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Conflict resolution systems</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl border border-purple-200 hover:shadow-lg transition-shadow">
+              <Building className="h-8 w-8 text-purple-600 mb-4" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Leadership Development</h3>
+              <p className="text-gray-600 text-sm mb-4">Build leaders who can maximize team potential across all backgrounds.</p>
+              <ul className="space-y-1 text-sm text-gray-700">
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Coaching methodologies</li>
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Performance management</li>
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Strategic thinking skills</li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl border border-orange-200 hover:shadow-lg transition-shadow">
+              <BarChart3 className="h-8 w-8 text-orange-600 mb-4" />
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Measurement & ROI</h3>
+              <p className="text-gray-600 text-sm mb-4">Track progress with metrics that matter to business outcomes.</p>
+              <ul className="space-y-1 text-sm text-gray-700">
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Retention analytics</li>
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Performance indicators</li>
+                <li className="flex items-center"><CheckCircle className="h-3 w-3 text-green-500 mr-2" />Innovation metrics</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Results & Testimonials */}
+        <section className="mb-16 bg-gray-50 rounded-2xl p-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              ROI That Speaks for Itself
+            </h2>
+            <p className="text-lg text-gray-600">
+              Organizations that invest in strategic culture development see measurable returns on investment.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-600 mb-2">41%</div>
+              <div className="text-sm text-gray-600">Reduction in voluntary turnover within 18 months</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">28%</div>
+              <div className="text-sm text-gray-600">Improvement in innovation and creativity metrics</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-600 mb-2">87%</div>
+              <div className="text-sm text-gray-600">Employee satisfaction and engagement scores</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-orange-600 mb-2">$1.4M</div>
+              <div className="text-sm text-gray-600">Average annual savings from reduced turnover</div>
+            </div>
+          </div>
+
+          {/* Testimonial */}
+          <div className="bg-white p-8 rounded-xl border border-gray-200 max-w-4xl mx-auto">
+            <div className="flex items-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+              ))}
+            </div>
+            <blockquote className="text-lg text-gray-700 mb-4">
+              "Global Insights Collective helped us transform from a workplace where talented people left after 18 months to one where they build entire careers. Their data-driven approach showed us exactly where we were losing people and why. Now we're attracting candidates who turn down offers from our biggest competitors to work here instead."
+            </blockquote>
+            <cite className="text-gray-600">
+              <strong>Jennifer Kim</strong>, Chief People Officer, InnovateTech Solutions
+            </cite>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-xl border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                How quickly can we expect to see results?
+              </h3>
+              <p className="text-gray-700">
+                Most organizations see initial improvements in employee satisfaction within 60-90 days. Measurable reductions in turnover typically occur within 6-12 months, with full culture transformation taking 12-18 months.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                What's the ROI on workplace culture investment?
+              </h3>
+              <p className="text-gray-700">
+                Our clients typically see 300-500% ROI within 24 months through reduced turnover costs, improved productivity, and enhanced ability to attract top talent. The average organization saves $1.4M annually in turnover-related costs alone.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                How do you measure culture change success?
+              </h3>
+              <p className="text-gray-700">
+                We track employee engagement scores, retention rates, internal promotion rates, recruitment success metrics, performance indicators, and innovation measures. All programs include quarterly progress reviews with data-driven recommendations.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center bg-gradient-to-br from-brand-600 to-purple-700 text-white rounded-2xl p-12">
+          <h2 className="text-3xl font-bold mb-4">
+            Stop Losing Top Talent to Competitors
+          </h2>
+          <p className="text-xl mb-8 text-brand-50 max-w-3xl mx-auto">
+            In today's competitive talent market, workplace culture is your secret weapon. Organizations with strong cultures attract the best candidates and keep them longer—turning culture investment into competitive advantage.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Button asChild size="lg" className="bg-white text-brand-600 hover:bg-gray-50">
+              <Link href="/contact">
+                Get Culture Assessment
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+              <Link href="/services">
+                View All Services
+              </Link>
+            </Button>
+          </div>
+          <p className="text-sm text-brand-200">
+            Free culture assessment • Custom development plan • Proven ROI methodology
+          </p>
+        </section>
+      </div>
+    </>
   );
 }

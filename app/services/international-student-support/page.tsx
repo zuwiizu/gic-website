@@ -35,12 +35,12 @@ const serviceSchema = {
 };
 
 export const metadata = {
-  title: 'International Student Support & Crisis Response | Protect Your Investment | Global Insights Collective',
-  description: 'Stop losing international students to preventable crises. 24/7 culturally-informed support reduces dropout rates by 34% and protects institutional reputation and revenue.',
-  keywords: 'international student support, student crisis response, cultural navigation, international student services, campus safety, student retention, emergency intervention',
+  title: 'International Student University Admissions Support | Global Insights Collective',
+  description: 'Expert guidance helping international students navigate US university admissions, applications, and cultural preparation for academic success.',
+  keywords: 'international student admissions, university applications, study abroad consulting, student visa support, college preparation',
   openGraph: {
-    title: 'Protect Your International Student Investment',
-    description: 'Comprehensive support that reduces dropout rates by 34% and keeps your international program thriving.',
+    title: 'Get Into American Universities',
+    description: 'Expert guidance for international students applying to US universities.',
   }
 };
 
@@ -61,147 +61,147 @@ export default function InternationalStudentSupport() {
         {/* Hero Section */}
         <section className="text-center mb-12 border-b pb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            International Student Support & Crisis Response
+            International Student University Admissions
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
-            Comprehensive support system for international students with 24/7 crisis response and cultural navigation assistance.
+            Expert guidance to help international students successfully apply to and get accepted into American universities.
           </p>
           <div className="flex justify-center gap-8 mb-6 text-sm text-gray-600">
-            <span>34% reduction in dropout rate</span>
-            <span>91% satisfaction improvement</span>
-            <span>24/7 crisis support</span>
+            <span>University application support</span>
+            <span>Visa guidance</span>
+            <span>Cultural preparation</span>
           </div>
           <Button asChild>
-            <Link href="/contact">Assess Your Program</Link>
+            <Link href="/contact">Start Application Process</Link>
           </Button>
         </section>
 
-        {/* The Challenge */}
+        {/* Common Challenges */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Common International Student Challenges
+            University Application Challenges
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <ul className="space-y-3 text-gray-700">
-                <li>• Students dropping out due to cultural isolation</li>
-                <li>• Campus incidents involving international students escalating</li>
-                <li>• Staff unprepared for cross-cultural communication</li>
-                <li>• Immigration complications threatening student status</li>
-                <li>• Reputation damage affecting future recruitment</li>
+                <li>• Complex application requirements and deadlines</li>
+                <li>• SAT/ACT test preparation and scheduling</li>
+                <li>• Personal statement and essay writing</li>
+                <li>• Student visa application process</li>
+                <li>• Understanding American university culture</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-3">Financial Impact:</h3>
+              <h3 className="font-semibold mb-3">What We Help With:</h3>
               <ul className="space-y-2 text-gray-600">
-                <li>• Lost tuition: $25,000-$60,000+ per dropout</li>
-                <li>• Legal costs: $15,000-$100,000+ per incident</li>
-                <li>• Staff time on crisis management: 200+ hours per incident</li>
-                <li>• Compliance violations and federal funding risk</li>
+                <li>• University selection and application strategy</li>
+                <li>• Test prep and English proficiency support</li>
+                <li>• Essay writing and interview preparation</li>
+                <li>• Visa documentation and process guidance</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Our Services */}
+        {/* Our Process */}
         <section id="services" className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Our 3-Step Support System
+            Our 3-Step Admissions Process
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="border-l-4 border-gray-300 pl-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">1. Cultural Navigation</h3>
-              <p className="text-gray-600 mb-3">Help students understand academic and social expectations.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">1. University Selection</h3>
+              <p className="text-gray-600 mb-3">Find the right universities that match your goals and profile.</p>
               <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Academic culture orientation</li>
-                <li>• Social integration strategies</li>
-                <li>• Mental health awareness</li>
+                <li>• Academic program matching</li>
+                <li>• Campus culture assessment</li>
+                <li>• Financial aid opportunities</li>
               </ul>
             </div>
             <div className="border-l-4 border-gray-300 pl-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">2. Crisis Response</h3>
-              <p className="text-gray-600 mb-3">24/7 intervention for emergencies affecting students.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">2. Application Support</h3>
+              <p className="text-gray-600 mb-3">Complete applications with compelling essays and documents.</p>
               <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Emergency assessment</li>
-                <li>• Immigration emergency support</li>
-                <li>• Family communication assistance</li>
+                <li>• Essay writing assistance</li>
+                <li>• Test preparation guidance</li>
+                <li>• Application deadline management</li>
               </ul>
             </div>
             <div className="border-l-4 border-gray-300 pl-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">3. Staff Training</h3>
-              <p className="text-gray-600 mb-3">Equip your team with cross-cultural support skills.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">3. Visa & Preparation</h3>
+              <p className="text-gray-600 mb-3">Navigate visa process and prepare for American university life.</p>
               <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Cross-cultural communication</li>
-                <li>• Crisis intervention techniques</li>
-                <li>• Immigration law basics</li>
+                <li>• Student visa application</li>
+                <li>• Cultural orientation</li>
+                <li>• Pre-departure preparation</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Program Options */}
+        {/* Service Packages */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Support Programs</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Service Packages</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="border border-gray-200 p-4">
-              <h3 className="font-semibold mb-2">Comprehensive Support</h3>
-              <p className="text-sm text-gray-600 mb-3">Full-service support for international student population</p>
+              <h3 className="font-semibold mb-2">Complete Admissions Package</h3>
+              <p className="text-sm text-gray-600 mb-3">Full support from university selection through enrollment</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Orientation program design</li>
-                <li>• Ongoing cultural mentoring</li>
-                <li>• Crisis intervention services</li>
+                <li>• University research and selection</li>
+                <li>• Application and essay assistance</li>
+                <li>• Visa support and cultural prep</li>
               </ul>
             </div>
             <div className="border border-gray-200 p-4">
-              <h3 className="font-semibold mb-2">Crisis Response Package</h3>
-              <p className="text-sm text-gray-600 mb-3">Emergency intervention when students face serious challenges</p>
+              <h3 className="font-semibold mb-2">Application Support</h3>
+              <p className="text-sm text-gray-600 mb-3">Help with applications, essays, and test preparation</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Emergency assessment</li>
-                <li>• Student advocacy</li>
-                <li>• Resource coordination</li>
+                <li>• Essay writing and editing</li>
+                <li>• Test prep guidance</li>
+                <li>• Application review</li>
               </ul>
             </div>
             <div className="border border-gray-200 p-4">
-              <h3 className="font-semibold mb-2">Staff Training Program</h3>
-              <p className="text-sm text-gray-600 mb-3">Equip your team to effectively support student success</p>
+              <h3 className="font-semibold mb-2">Visa & Cultural Prep</h3>
+              <p className="text-sm text-gray-600 mb-3">Navigate visa process and prepare for American university life</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Cultural competency skills</li>
-                <li>• Crisis intervention protocols</li>
-                <li>• Resource navigation training</li>
+                <li>• Student visa application</li>
+                <li>• Cultural orientation</li>
+                <li>• Pre-arrival preparation</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Critical Situations */}
+        {/* Universities We Work With */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">When Students Need Expert Support</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Types of Universities We Help With</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="border border-gray-200 p-4">
-              <h3 className="font-semibold mb-2">Immigration Emergencies</h3>
-              <p className="text-sm text-gray-600 mb-2">Visa status complications, SEVIS issues, or policy changes.</p>
+              <h3 className="font-semibold mb-2">Top-Tier Universities</h3>
+              <p className="text-sm text-gray-600 mb-2">Ivy League and highly competitive institutions.</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Immediate legal consultation</li>
-                <li>• Documentation assistance</li>
-                <li>• Institutional coordination</li>
+                <li>• Harvard, Yale, Princeton</li>
+                <li>• Stanford, MIT, Caltech</li>
+                <li>• Comprehensive application strategy</li>
               </ul>
             </div>
             <div className="border border-gray-200 p-4">
-              <h3 className="font-semibold mb-2">Academic Crises</h3>
-              <p className="text-sm text-gray-600 mb-2">Grade appeals, misconduct allegations, or program changes.</p>
+              <h3 className="font-semibold mb-2">State Universities</h3>
+              <p className="text-sm text-gray-600 mb-2">Quality education with more accessible admissions.</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Academic advocacy</li>
-                <li>• Cultural context education</li>
-                <li>• Appeals process navigation</li>
+                <li>• UC system, SUNY, University of Texas</li>
+                <li>• Strong programs at lower costs</li>
+                <li>• Merit scholarship opportunities</li>
               </ul>
             </div>
             <div className="border border-gray-200 p-4">
-              <h3 className="font-semibold mb-2">Personal Safety Incidents</h3>
-              <p className="text-sm text-gray-600 mb-2">Discrimination, harassment, or safety concerns.</p>
+              <h3 className="font-semibold mb-2">Specialized Programs</h3>
+              <p className="text-sm text-gray-600 mb-2">Universities known for specific fields of study.</p>
               <ul className="text-xs text-gray-600 space-y-1">
-                <li>• Safety assessment</li>
-                <li>• Support coordination</li>
-                <li>• Family communication</li>
+                <li>• Engineering and technology</li>
+                <li>• Business and finance</li>
+                <li>• Arts and liberal arts</li>
               </ul>
             </div>
           </div>
@@ -209,88 +209,59 @@ export default function InternationalStudentSupport() {
 
         {/* Results */}
         <section className="mb-12 bg-gray-50 p-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Results</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Success Stories</h2>
           <div className="grid md:grid-cols-4 gap-4 mb-6">
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900">34%</div>
-              <div className="text-sm text-gray-600">Reduction in dropout rates</div>
+              <div className="text-2xl font-bold text-gray-900">85%</div>
+              <div className="text-sm text-gray-600">Admission success rate</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900">91%</div>
-              <div className="text-sm text-gray-600">Satisfaction improvement</div>
+              <div className="text-2xl font-bold text-gray-900">200+</div>
+              <div className="text-sm text-gray-600">Students placed successfully</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900">$850K</div>
-              <div className="text-sm text-gray-600">Annual tuition revenue protected</div>
+              <div className="text-2xl font-bold text-gray-900">$2.5M</div>
+              <div className="text-sm text-gray-600">Total scholarships secured</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-gray-900">72 hrs</div>
-              <div className="text-sm text-gray-600">Average crisis resolution time</div>
+              <div className="text-2xl font-bold text-gray-900">50+</div>
+              <div className="text-sm text-gray-600">Partner universities</div>
             </div>
           </div>
           <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-700">
-            "Our international student retention rate improved by 34%, protecting over $850,000 in annual tuition revenue."
+            "Global Insights Collective helped me get into Stanford with a full scholarship. Their essay guidance and cultural preparation made all the difference."
           </blockquote>
-          <cite className="text-sm text-gray-600">— Dr. Ahmed Patel, Director of International Services</cite>
+          <cite className="text-sm text-gray-600">— Maria Chen, Stanford University Class of 2025</cite>
         </section>
 
-        {/* FAQ Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-6 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What types of crises do international students typically face?
-              </h3>
-              <p className="text-gray-700">
-                Common issues include immigration status complications, academic misconduct misunderstandings, mental health crises, family emergencies abroad, financial emergencies, and cultural conflicts with roommates or classmates.
-              </p>
+        {/* FAQ */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Common Questions</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold mb-2">When should I start the university application process?</h3>
+              <p className="text-gray-600 text-sm">Ideally 12-18 months before your intended start date. This allows time for test preparation, essay writing, and visa processing.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                How quickly can you respond to student emergencies?
-              </h3>
-              <p className="text-gray-700">
-                Our 24/7 hotline provides immediate assessment within 30 minutes. For urgent situations, we can have support staff on campus within 2-4 hours. We maintain relationships with immigration attorneys and mental health professionals for rapid response.
-              </p>
+            <div>
+              <h3 className="font-semibold mb-2">What documents do I need for university applications?</h3>
+              <p className="text-gray-600 text-sm">Transcripts, standardized test scores (SAT/ACT), English proficiency tests (TOEFL/IELTS), essays, and recommendation letters.</p>
             </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What makes your approach different from typical international student services?
-              </h3>
-              <p className="text-gray-700">
-                We combine deep cultural expertise with crisis intervention training. Our team includes former international students, immigration specialists, and mental health professionals who understand the unique pressures these students face.
-              </p>
+            <div>
+              <h3 className="font-semibold mb-2">How do you help with scholarship applications?</h3>
+              <p className="text-gray-600 text-sm">We identify scholarship opportunities that match your profile and help craft compelling applications that highlight your unique strengths.</p>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="text-center bg-gradient-to-br from-brand-600 to-blue-700 text-white rounded-2xl p-12">
-          <h2 className="text-3xl font-bold mb-4">
-            Don't Risk Losing International Students to Preventable Crises
-          </h2>
-          <p className="text-xl mb-8 text-brand-50 max-w-3xl mx-auto">
-            Every international student who drops out represents lost tuition revenue and damaged reputation. Invest in comprehensive support before problems escalate into expensive crises.
+        {/* CTA */}
+        <section className="text-center bg-gray-900 text-white p-8">
+          <h2 className="text-2xl font-bold mb-4">Ready to Apply to American Universities?</h2>
+          <p className="mb-6 max-w-2xl mx-auto">
+            Get expert guidance through every step of the application process. Start your journey to studying in America.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button asChild size="lg" className="bg-white text-brand-600 hover:bg-gray-50">
-              <Link href="/contact">
-                Assess Your Program
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-              <Link href="/services">
-                View All Services
-              </Link>
-            </Button>
-          </div>
-          <p className="text-sm text-brand-200">
-            Free program assessment • Custom support plan • 24/7 crisis coverage
-          </p>
+          <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
+            <Link href="/contact">Start Your Application</Link>
+          </Button>
         </section>
       </div>
     </>

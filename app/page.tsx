@@ -2,7 +2,7 @@ import Hero from '../components/Hero';
 import AudienceSection from '../components/AudienceSection';
 import ServicesGrid from '../components/ServicesGrid';
 
-import { FeaturedVideo } from '../components/YouTubeEmbed';
+
 import { StructuredData } from '../components/StructuredData';
 import { organizationSchema, serviceSchema } from '../lib/structured-data-schemas';
 
@@ -18,7 +18,7 @@ export default function Home() {
       <StructuredData data={serviceSchema} />
       <Hero />
 
-      {/* Trust/Proof Band - Following NN/g B2B guidelines */}
+      {/* Trust/Proof Band */}
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
@@ -47,30 +47,7 @@ export default function Home() {
         </div>
       </section>
 
-      <AudienceSection />
       <ServicesGrid />
-
-
-      {/* Featured Video Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              See Our Impact in Action
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Watch how Global Insights Collective helps organizations create inclusive communities and drive meaningful change.
-            </p>
-          </div>
-          <FeaturedVideo
-            videoId="dQw4w9WgXcQ" // Replace with actual video ID
-            title="Building Inclusive Communities: Our Approach"
-            description="Learn about our evidence-based methodology for creating lasting organizational change."
-          />
-        </div>
-      </section>
-
-
     </>
   );
 }

@@ -63,10 +63,10 @@ export default function CulturalCompetency() {
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Stop Walking on Eggshells Around Diversity
+            Build Global Teams That Actually Work Together
           </h1>
           <p className="text-xl text-gray-700 max-w-4xl mx-auto mb-8">
-            Transform cultural misunderstandings into competitive advantages. Our proven workshops give your teams the confidence to navigate diversity without fear—turning awkward moments into connection opportunities.
+            Turn cultural differences into your competitive advantage. Our proven workshops help international teams communicate effectively, resolve conflicts faster, and innovate together—boosting productivity by up to 23%.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="bg-white px-6 py-3 rounded-full shadow-sm">
@@ -95,16 +95,16 @@ export default function CulturalCompetency() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                The Hidden Cost of Cultural Confusion
+                The Performance Drain of Poor Cross-Cultural Communication
               </h2>
               <div className="space-y-4 text-gray-700">
                 <p className="flex items-start space-x-3">
                   <span className="text-red-500 mt-1">✗</span>
-                  <span>Teams avoiding difficult conversations about culture and inclusion</span>
+                  <span>Teams struggling to communicate across cultural and generational differences</span>
                 </p>
                 <p className="flex items-start space-x-3">
                   <span className="text-red-500 mt-1">✗</span>
-                  <span>Leaders paralyzed by fear of saying the "wrong thing"</span>
+                  <span>Managers avoiding direct feedback with international team members</span>
                 </p>
                 <p className="flex items-start space-x-3">
                   <span className="text-red-500 mt-1">✗</span>
@@ -112,7 +112,7 @@ export default function CulturalCompetency() {
                 </p>
                 <p className="flex items-start space-x-3">
                   <span className="text-red-500 mt-1">✗</span>
-                  <span>Innovation suffering when diverse perspectives stay silent</span>
+                  <span>Missed opportunities when global perspectives aren't effectively leveraged</span>
                 </p>
                 <p className="flex items-start space-x-3">
                   <span className="text-red-500 mt-1">✗</span>
@@ -136,10 +136,10 @@ export default function CulturalCompetency() {
         <section id="methodology" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              The Global Insights Method: Confidence Through Competence
+              The Global Team Performance Framework
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Instead of tiptoeing around culture, we teach your teams to engage with it authentically and skillfully.
+              Instead of avoiding difficult conversations, we give your teams the frameworks to navigate cultural differences professionally and productively.
             </p>
           </div>
 

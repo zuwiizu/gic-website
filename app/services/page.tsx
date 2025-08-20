@@ -62,8 +62,7 @@ export const metadata = {
   description: 'Comprehensive training, consulting, and support services to help organizations build inclusive communities and drive measurable outcomes.',
 };
 
-export default function ServicesPage() {
-  return (
+return (
     <div className="max-w-7xl mx-auto py-8 px-4">
       {/* Breadcrumb */}
       <Breadcrumb
@@ -74,102 +73,174 @@ export default function ServicesPage() {
       {/* Header */}
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Transform Your Organization
+          Our Services
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          Partner with Global Insights Collective to build workplaces and learning environments 
-          where every individual thrives. Our proven methodologies drive measurable results 
-          in cultural competence, inclusion, and organizational resilience.
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Comprehensive solutions to build stronger communities, improve team performance, and drive measurable business outcomes.
         </p>
-        <Button asChild size="lg">
-          <Link href="/contact">Discuss Your Needs</Link>
-        </Button>
       </section>
 
-      {/* Services Grid */}
-      <section className="mb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-200"
-              >
-                {/* Header */}
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="flex items-center justify-center w-12 h-12 bg-brand-100 rounded-lg flex-shrink-0">
-                    <IconComponent className="h-6 w-6 text-brand-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Features */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">
-                    Key Features
-                  </h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Details */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-sm">
-                  <div className="flex items-start space-x-2">
-                    <Clock className="h-4 w-4 text-gray-400 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-gray-900">Duration</div>
-                      <div className="text-gray-600">{service.duration}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <MapPin className="h-4 w-4 text-gray-400 mt-0.5 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-gray-900">Delivery</div>
-                      <div className="text-gray-600">{service.delivery.join(', ')}</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Outcomes */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">
-                    Expected Outcomes
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.outcomes.map((outcome, outcomeIndex) => (
-                      <span
-                        key={outcomeIndex}
-                        className="px-3 py-1 bg-brand-50 text-brand-700 text-xs rounded-full"
-                      >
-                        {outcome}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* CTA */}
-                <Button asChild variant="outline" className="w-full">
-                  <Link href={service.href}>
-                    Learn More About {service.title}
-                  </Link>
-                </Button>
+      {/* Services Directory */}
+      <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {/* Cultural Competency */}
+        <Link href="/services/cultural-competency" className="group">
+          <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 h-full">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                <Users className="h-6 w-6 text-blue-600" />
               </div>
-            );
-          })}
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                Cultural Competency Training
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Build global teams that communicate effectively and collaborate confidently across cultural differences.
+            </p>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>45% reduction in cultural incidents</span>
+            </div>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>92% confidence improvement</span>
+            </div>
+            <div className="flex items-center text-blue-600 text-sm font-medium group-hover:text-blue-700">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </div>
+          </div>
+        </Link>
+
+        {/* Crisis Response */}
+        <Link href="/services/crisis-response" className="group">
+          <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 h-full">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                <AlertTriangle className="h-6 w-6 text-red-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+                Crisis Response & Conflict Resolution
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              24/7 expert intervention when bias incidents and cultural conflicts threaten your organization.
+            </p>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>96% resolution rate without formal proceedings</span>
+            </div>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>Same-day emergency response</span>
+            </div>
+            <div className="flex items-center text-red-600 text-sm font-medium group-hover:text-red-700">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </div>
+          </div>
+        </Link>
+
+        {/* Community Engagement */}
+        <Link href="/services/community-engagement" className="group">
+          <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 h-full">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                <Building className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                Community Engagement & Public Safety
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Build safer communities through expert-facilitated dialogue between residents, officials, and service providers.
+            </p>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>89% improvement in community trust</span>
+            </div>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>67% reduction in community tensions</span>
+            </div>
+            <div className="flex items-center text-green-600 text-sm font-medium group-hover:text-green-700">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </div>
+          </div>
+        </Link>
+
+        {/* International Student Support */}
+        <Link href="/services/international-student-support" className="group">
+          <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 h-full">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4">
+                <Globe className="h-6 w-6 text-cyan-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-cyan-600 transition-colors">
+                International Student Support
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Comprehensive support system that protects your international student investment and ensures their success.
+            </p>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>34% reduction in dropout rates</span>
+            </div>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>24/7 crisis support available</span>
+            </div>
+            <div className="flex items-center text-cyan-600 text-sm font-medium group-hover:text-cyan-700">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </div>
+          </div>
+        </Link>
+
+        {/* Inclusive Workplace */}
+        <Link href="/services/inclusive-workplace" className="group">
+          <div className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all duration-200 h-full">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                <BarChart3 className="h-6 w-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
+                Inclusive Workplace Programs
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Transform workplace culture to attract top talent and boost team performance through data-driven strategies.
+            </p>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>41% reduction in turnover</span>
+            </div>
+            <div className="flex items-center text-sm text-gray-500 mb-4">
+              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+              <span>28% boost in innovation metrics</span>
+            </div>
+            <div className="flex items-center text-purple-600 text-sm font-medium group-hover:text-purple-700">
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </div>
+          </div>
+        </Link>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="text-center bg-gradient-to-br from-brand-600 to-blue-700 text-white rounded-2xl p-12">
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Transform Your Organization?
+        </h2>
+        <p className="text-xl mb-8 text-brand-50 max-w-3xl mx-auto">
+          Every successful transformation starts with a conversation. Let's discuss your specific challenges and design a solution that delivers measurable results.
+        </p>
+        <Button asChild size="lg" className="bg-white text-brand-600 hover:bg-gray-50">
+          <Link href="/contact">
+            Schedule Your Consultation
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </Button>
+      </section>
+    </div>
+  );
+}
         </div>
       </section>
 
