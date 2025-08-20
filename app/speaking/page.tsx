@@ -1,121 +1,149 @@
 import Link from 'next/link';
 import { Button } from '../../components/ui/button';
 import { Breadcrumb } from '../../components/ui/breadcrumb';
-import { Mic, Users, Building, Globe } from 'lucide-react';
+import { Mic, Users, Building, Globe, ArrowRight } from 'lucide-react';
 
 export const metadata = {
-  title: 'Speaking & Presentations | Global Insights Collective',
-  description: 'Professional keynote speaking on international education, corporate training, and community safety.',
+  title: 'Speaking Engagements | Global Insights Collective',
+  description: 'Professional keynote speaking on international education, corporate training, and organizational transformation.',
 };
 
 export default function SpeakingPage() {
   return (
-    <div className="max-w-4xl mx-auto py-8 px-4">
-      {/* Breadcrumb */}
-      <Breadcrumb
-        items={[{ label: 'Speaking' }]}
-        className="mb-8"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-6xl mx-auto py-16 px-4">
+        {/* Breadcrumb */}
+        <Breadcrumb
+          items={[{ label: 'Speaking Engagements' }]}
+          className="mb-8"
+        />
 
-      {/* Header */}
-      <section className="text-center mb-12 border-b pb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Speaking & Presentations
-        </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-          Professional keynote speaking and presentations for conferences, corporate events, and educational institutions.
-        </p>
-        <Button asChild>
-          <Link href="/contact">Book Speaking Engagement</Link>
-        </Button>
-      </section>
+        {/* Header */}
+        <section className="text-center mb-16">
+          <div className="bg-orange-50 rounded-full p-4 w-fit mx-auto mb-6">
+            <Mic className="h-12 w-12 text-orange-600" />
+          </div>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Speaking Engagements
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+            Expert keynote speaking and presentations that inspire action and drive organizational transformation.
+          </p>
+          <Button asChild size="lg">
+            <Link href="/contact">
+              Book Speaking Engagement
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </section>
 
-      {/* Speaking Topics */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Speaking Topics</h2>
-        <div className="space-y-6">
-          <div className="border border-gray-200 p-6">
-            <div className="flex items-start space-x-4">
-              <Globe className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold mb-2">International Education</h3>
-                <p className="text-gray-600 mb-3">
-                  University admissions strategies, student success, and international program development.
-                </p>
-                <div className="text-sm text-gray-500">
-                  Student retention • Admissions best practices • Cultural navigation
-                </div>
-              </div>
+        {/* Speaking Topics */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Speaking Topics</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-all">
+              <Globe className="h-8 w-8 text-blue-600 mb-4" />
+              <h3 className="text-xl font-bold mb-4">International Education & Leadership</h3>
+              <p className="text-gray-600 mb-4">
+                Strategies for supporting international students, building global perspectives, and creating inclusive educational environments.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• University admissions and student success</li>
+                <li>• Cross-cultural leadership development</li>
+                <li>• Global talent attraction and retention</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-lg transition-all">
+              <Building className="h-8 w-8 text-green-600 mb-4" />
+              <h3 className="text-xl font-bold mb-4">Corporate Culture & Performance</h3>
+              <p className="text-gray-600 mb-4">
+                Practical strategies for building inclusive workplaces that drive innovation, performance, and employee engagement.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Cultural competency in the workplace</li>
+                <li>• Inclusive leadership practices</li>
+                <li>• Organizational transformation strategies</li>
+              </ul>
             </div>
           </div>
+        </section>
 
-          <div className="border border-gray-200 p-6">
-            <div className="flex items-start space-x-4">
-              <Building className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold mb-2">Corporate Development</h3>
-                <p className="text-gray-600 mb-3">
-                  Leadership training, team performance, and organizational culture development.
-                </p>
-                <div className="text-sm text-gray-500">
-                  Leadership development • Team communication • Performance optimization
-                </div>
+        {/* Speaking Formats */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Available Formats</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-50 rounded-full p-4 w-fit mx-auto mb-4">
+                <Mic className="h-8 w-8 text-blue-600" />
               </div>
+              <h3 className="text-xl font-bold mb-3">Keynote Presentations</h3>
+              <p className="text-gray-600 mb-4">
+                45-60 minute inspirational keynotes for conferences and corporate events.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Conference keynotes</li>
+                <li>• Corporate events</li>
+                <li>• Educational summits</li>
+              </ul>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-green-50 rounded-full p-4 w-fit mx-auto mb-4">
+                <Users className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Interactive Workshops</h3>
+              <p className="text-gray-600 mb-4">
+                Hands-on training sessions with practical tools and strategies.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Half-day workshops</li>
+                <li>• Executive briefings</li>
+                <li>• Team training sessions</li>
+              </ul>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-purple-50 rounded-full p-4 w-fit mx-auto mb-4">
+                <Globe className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Virtual Presentations</h3>
+              <p className="text-gray-600 mb-4">
+                Engaging online presentations and webinars for global audiences.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                <li>• Virtual keynotes</li>
+                <li>• Webinar series</li>
+                <li>• Online panels</li>
+              </ul>
             </div>
           </div>
+        </section>
 
-          <div className="border border-gray-200 p-6">
-            <div className="flex items-start space-x-4">
-              <Users className="h-6 w-6 text-purple-600 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold mb-2">Community Safety</h3>
-                <p className="text-gray-600 mb-3">
-                  Public safety training, community relations, and conflict resolution strategies.
-                </p>
-                <div className="text-sm text-gray-500">
-                  Crisis response • Community engagement • Conflict resolution
-                </div>
-              </div>
-            </div>
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-2xl p-12 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Inspire Your Audience?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Let's discuss your event goals and create a customized presentation that resonates with your audience.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
+              <Link href="/contact">
+                Request Speaking Information
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+              <Link href="/about">
+                Learn About Ismail
+              </Link>
+            </Button>
           </div>
-        </div>
-      </section>
-
-      {/* Speaking Formats */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Available Formats</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="font-semibold mb-3">Keynote Presentations</h3>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Conference keynotes (45-60 minutes)</li>
-              <li>• Corporate events</li>
-              <li>• Educational conferences</li>
-              <li>• Industry panels</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-3">Workshops & Training</h3>
-            <ul className="text-gray-600 space-y-2">
-              <li>• Half-day workshops</li>
-              <li>• Executive briefings</li>
-              <li>• Staff training sessions</li>
-              <li>• Virtual presentations</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="text-center bg-gray-900 text-white p-8">
-        <h2 className="text-2xl font-bold mb-4">Ready to Book a Speaker?</h2>
-        <p className="mb-6 max-w-2xl mx-auto">
-          Contact us to discuss your event needs and customize a presentation for your audience.
-        </p>
-        <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
-          <Link href="/contact">Request Speaking Information</Link>
-        </Button>
-      </section>
+          <p className="text-sm mt-6 opacity-75">
+            Custom presentations • Professional delivery • Measurable impact
+          </p>
+        </section>
+      </div>
     </div>
   );
 }

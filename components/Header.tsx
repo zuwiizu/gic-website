@@ -2,14 +2,34 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 import { SkipLink } from './ui/skip-link';
 import { cn } from '../lib/utils';
 
+const services = [
+  {
+    title: 'International Student Support',
+    href: '/services/international-student-support',
+    description: 'University admissions guidance and support'
+  },
+  {
+    title: 'Inclusive Workplace Programs',
+    href: '/services/inclusive-workplace',
+    description: 'Workplace transformation and culture development'
+  },
+  {
+    title: 'Strategic Consulting',
+    href: '/services/consulting',
+    description: 'Expert strategic guidance and organizational development'
+  }
+];
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -58,12 +78,52 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <Link 
-                href="/services"
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm px-2 py-1"
-              >
-                Services
-              </Link>
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm px-2 py-1"
+                  aria-expanded={servicesOpen ? 'true' : 'false'}
+                  aria-haspopup="true"
+                >
+                  Services
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {servicesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                    <div className="p-4">
+                      <div className="space-y-3">
+                        {services.map((service) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            onClick={() => setServicesOpen(false)}
+                            className="block p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                          >
+                            <div className="font-medium text-gray-900 mb-1">
+                              {service.title}
+                            </div>
+                            <div className="text-sm text-gray-600">
+                              {service.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-gray-200">
+                        <Link
+                          href="/services"
+                          onClick={() => setServicesOpen(false)}
+                          className="block text-sm font-medium text-brand-600 hover:text-brand-700"
+                        >
+                          View All Services →
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
               <Link 
                 href="/who-we-help"
                 className="text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm px-2 py-1"

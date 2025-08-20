@@ -4,7 +4,7 @@ import { Button } from '../../components/ui/button';
 import { Breadcrumb } from '../../components/ui/breadcrumb';
 import { Breadcrumbs } from '../../components/Breadcrumbs';
 import { Users, Target, Award, TrendingUp } from 'lucide-react';
-import { getAllTeamMembers } from '../../lib/content';
+
 
 const stats = [
   {
@@ -57,9 +57,7 @@ export const metadata = {
   description: 'Learn about our mission, approach, and the team behind Global Insights Collective. We help institutions create inclusive communities through evidence-based training and consulting.',
 };
 
-export default async function AboutPage() {
-  const teamMembers = await getAllTeamMembers();
-
+export default function AboutPage() {
   return (
     <>
       <Breadcrumbs />
@@ -73,15 +71,15 @@ export default async function AboutPage() {
               About Global Insights Collective
             </h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              We are a cross-functional team of educators, practitioners, and community leaders
-              delivering training and advisory services that create lasting change.
+              Founded by Ismail Warsame, we deliver expert consulting, training, and speaking services 
+              that help organizations create inclusive environments and drive measurable results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg">
                 <Link href="/contact">Work With Us</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/case-studies">See Our Impact</Link>
+                <Link href="/speaking">Book as Speaker</Link>
               </Button>
             </div>
           </div>
@@ -107,24 +105,24 @@ export default async function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              We partner with institutions to foster inclusive environments where diverse identities
-              are valued and supported. Our approach blends evidence-based curricula with lived
-              experience to drive durable behavior change.
+              We partner with organizations to foster inclusive environments where diverse identities
+              are valued and supported. Our approach blends evidence-based strategies with practical
+              experience to drive sustainable change.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              From cultural competency training and crisis response to inclusive workplace initiatives
-              and community engagement, we help clients translate cultural awareness into tangible outcomes.
+              Through international student support, corporate training with cultural competency, strategic consulting, 
+              and professional speaking engagements, we help clients achieve measurable results.
             </p>
           </div>
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Approach</h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Our collective has decades of combined experience in international student services,
-              diversity and inclusion leadership, public safety, and restorative justice.
+              With over a decade of experience in international education, organizational development, 
+              and cultural competency training, we bring proven expertise to every engagement.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Through customized consulting, dynamic workshops, and in-depth assessments, we equip
-              organizations with the tools they need to build cultures of belonging.
+              Through customized consulting, dynamic workshops, and compelling presentations, we equip
+              organizations with practical tools to build cultures of belonging and achieve sustainable results.
             </p>
           </div>
         </div>
@@ -182,62 +180,61 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Founder Section */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Founder</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Meet the experienced professionals driving our mission to create inclusive communities.
+            Ismail Warsame brings over a decade of experience in international education, organizational development, and cultural competency training.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member) => (
-            <div key={member.slug} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow text-center">
-              <div className="mb-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl p-8 border border-gray-200 shadow-lg">
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="text-center">
                 <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={120}
-                  height={120}
-                  className="w-30 h-30 rounded-full mx-auto object-cover"
+                  src="/team/ismail-warsame.jpg"
+                  alt="Ismail Warsame"
+                  width={200}
+                  height={200}
+                  className="w-48 h-48 rounded-full mx-auto object-cover mb-4"
                 />
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-gray-900">Ismail Warsame</h3>
+                  <p className="text-brand-600 font-medium">Founder & CEO</p>
+                  <p className="text-gray-600 text-sm">M.Ed., PMP</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
-                {member.name}
-                {member.credentials && (
-                  <span className="text-sm font-normal text-gray-600 ml-2">
-                    {member.credentials}
-                  </span>
-                )}
-              </h3>
-              <p className="text-brand-600 font-medium mb-4">
-                {member.title}
-              </p>
-              <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                {member.bio}
-              </p>
-              <div className="flex flex-wrap gap-2 justify-center mb-4">
-                {member.expertise.slice(0, 3).map((skill, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 bg-brand-50 text-brand-700 text-xs rounded-full"
-                  >
-                    {skill}
-                  </span>
-                ))}
+              
+              <div className="md:col-span-2">
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Ismail is the visionary founder and CEO of Global Insights Collective, bringing over a decade of experience in international education, diversity and inclusion, and organizational development. With a Master's in Education (M.Ed.) and Project Management Professional (PMP) certification, he combines academic rigor with practical implementation expertise.
+                </p>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Areas of Expertise</h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-brand-50 text-brand-700 text-sm rounded-full">International Student Services</span>
+                    <span className="px-3 py-1 bg-brand-50 text-brand-700 text-sm rounded-full">Organizational Development</span>
+                    <span className="px-3 py-1 bg-brand-50 text-brand-700 text-sm rounded-full">Cultural Competency Training</span>
+                    <span className="px-3 py-1 bg-brand-50 text-brand-700 text-sm rounded-full">Strategic Planning</span>
+                    <span className="px-3 py-1 bg-brand-50 text-brand-700 text-sm rounded-full">Keynote Speaking</span>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Button asChild variant="outline">
+                    <Link href="https://linkedin.com/in/ismailwarsame" target="_blank">
+                      LinkedIn Profile
+                    </Link>
+                  </Button>
+                  <Button asChild>
+                    <Link href="/speaking">
+                      Book as Speaker
+                    </Link>
+                  </Button>
+                </div>
               </div>
-              {member.linkedin && (
-                <Link
-                  href={member.linkedin}
-                  className="text-brand-600 hover:text-brand-700 text-sm font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Connect on LinkedIn →
-                </Link>
-              )}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 

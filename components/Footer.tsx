@@ -4,16 +4,15 @@ import { Button } from './ui/button';
 
 const footerNavigation = {
   services: [
-    { name: 'Cultural Competency Training', href: '/services/cultural-competency' },
     { name: 'International Student Support', href: '/services/international-student-support' },
-    { name: 'Inclusive Workplace Programs', href: '/services/inclusive-workplace' },
-    { name: 'Crisis Response & Mediation', href: '/services/crisis-response' },
+    { name: 'Corporate Training & Cultural Competency', href: '/services/inclusive-workplace' },
+    { name: 'Strategic Consulting', href: '/services/consulting' },
+    { name: 'Speaking Engagements', href: '/speaking' },
   ],
-  audiences: [
-    { name: 'Universities', href: '/universities' },
-    { name: 'Employers', href: '/employers' },
-    { name: 'Healthcare & Public Safety', href: '/healthcare-public-safety' },
-    { name: 'Community & Nonprofits', href: '/nonprofits' },
+  resources: [
+    { name: 'Who We Help', href: '/who-we-help' },
+    { name: 'All Services', href: '/services' },
+    { name: 'Community Engagement', href: '/services/community-engagement' },
   ],
   company: [
     { name: 'About', href: '/about' },
@@ -75,13 +74,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Audiences */}
+          {/* Resources */}
           <div>
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
-              Who We Help
+              Resources
             </h3>
             <ul className="space-y-3">
-              {footerNavigation.audiences.map((item) => (
+              {footerNavigation.resources.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}

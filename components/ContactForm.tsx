@@ -5,7 +5,6 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
-import { Turnstile } from './ui/turnstile';
 import { useAccessibility } from './providers/accessibility-provider';
 import {
   CheckCircle,
@@ -18,14 +17,12 @@ interface FormData {
   email: string;
   organization: string;
   role: string;
-  phone: string;
   subject: string;
   message: string;
   budget: string;
   timeline: string;
   services: string[];
   hearAbout: string;
-  newsletter: boolean;
 }
 
 const initialFormData: FormData = {
@@ -33,30 +30,27 @@ const initialFormData: FormData = {
   email: '',
   organization: '',
   role: '',
-  phone: '',
   subject: '',
   message: '',
   budget: '',
   timeline: '',
   services: [],
-  hearAbout: '',
-  newsletter: false
+  hearAbout: ''
 };
 
 const services = [
-  'Cultural Competency Training',
-  'Crisis Response & Mediation',
-  'Organizational Development',
-  'Assessment & Evaluation',
+  'International Student Support',
+  'Corporate Training & Cultural Competency',
+  'Workplace Transformation Programs',
   'Strategic Consulting',
-  'Speaking & Workshops'
+  'Speaking Engagements',
+  'Other'
 ];
 
 export function ContactForm() {
   const [formData, setFormData] = React.useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitStatus, setSubmitStatus] = React.useState<'idle' | 'success' | 'error'>('idle');
-  const [turnstileToken, setTurnstileToken] = React.useState<string>('');
   const { announceToScreenReader } = useAccessibility();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -82,11 +76,6 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!turnstileToken) {
-      announceToScreenReader('Please complete the security verification.');
-      return;
-    }
-
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -96,7 +85,6 @@ export function ContactForm() {
       
       setSubmitStatus('success');
       setFormData(initialFormData);
-      setTurnstileToken('');
       announceToScreenReader('Your message has been sent successfully. We will get back to you within 24 hours.');
     } catch (error) {
       setSubmitStatus('error');
@@ -181,21 +169,6 @@ export function ContactForm() {
         </div>
       </div>
 
-      <div>
-        <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
-          Phone Number
-        </Label>
-        <Input
-          id="phone"
-          name="phone"
-          type="tel"
-          value={formData.phone}
-          onChange={handleInputChange}
-          className="mt-1"
-          placeholder="(555) 123-4567"
-        />
-      </div>
-
       {/* Project Details */}
       <div className="border-t border-gray-200 pt-6">
         <h3 className="text-lg font-medium text-gray-900 mb-4">Project Details</h3>
@@ -252,40 +225,6 @@ export function ContactForm() {
         </div>
       </div>
 
-      {/* Security */}
-      <div className="border-t border-gray-200 pt-6">
-        <Label className="text-sm font-medium text-gray-700 mb-3 block">
-          Security Verification *
-        </Label>
-        <Turnstile
-          siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
-          onVerify={setTurnstileToken}
-          onError={() => setTurnstileToken('')}
-          onExpire={() => setTurnstileToken('')}
-        />
-      </div>
-
-      {/* Newsletter */}
-      <div className="border-t border-gray-200 pt-6">
-        <label className="flex items-start space-x-3 cursor-pointer">
-          <input
-            type="checkbox"
-            name="newsletter"
-            checked={formData.newsletter}
-            onChange={handleInputChange}
-            className="h-4 w-4 text-brand-600 focus:ring-brand-500 border-gray-300 rounded mt-0.5"
-          />
-          <div>
-            <span className="text-sm font-medium text-gray-700">
-              Subscribe to our newsletter
-            </span>
-            <p className="text-xs text-gray-500 mt-1">
-              Receive monthly insights on diversity, inclusion, and community building
-            </p>
-          </div>
-        </label>
-      </div>
-
       {/* Submit */}
       <div className="border-t border-gray-200 pt-6">
         {submitStatus === 'success' && (
@@ -308,7 +247,7 @@ export function ContactForm() {
 
         <Button
           type="submit"
-          disabled={isSubmitting || !turnstileToken}
+          disabled={isSubmitting}
           className="w-full md:w-auto"
         >
           {isSubmitting ? (

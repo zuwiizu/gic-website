@@ -10,32 +10,32 @@ export const metadata: Metadata = {
 
 const audiences = [
   {
-    title: 'Universities',
+    title: 'International Students & Universities',
     icon: Users,
-    description: 'Create inclusive campuses where every student can thrive',
-    benefits: ['Reduce bias incidents', 'Improve retention rates', 'Enhance campus climate'],
-    href: '/universities'
+    description: 'Supporting international students through their academic journey',
+    benefits: ['University admissions guidance', 'Application support and mentoring', 'Academic success strategies'],
+    href: '/services/international-student-support'
   },
   {
-    title: 'Employers',
+    title: 'Corporate Organizations',
     icon: Building2,
-    description: 'Build diverse teams and cultures that drive innovation',
-    benefits: ['Attract top talent', 'Increase engagement', 'Drive performance'],
-    href: '/employers'
+    description: 'Building inclusive workplaces that drive performance',
+    benefits: ['Cultural competency training', 'Inclusive leadership development', 'Organizational transformation'],
+    href: '/services/inclusive-workplace'
   },
   {
-    title: 'Healthcare & Public Safety',
-    icon: Heart,
-    description: 'Deliver equitable services to diverse communities',
-    benefits: ['Improve patient outcomes', 'Build community trust', 'Reduce disparities'],
-    href: '/healthcare-public-safety'
-  },
-  {
-    title: 'Community & Nonprofits',
+    title: 'All Organizations',
     icon: HandHeart,
-    description: 'Strengthen community connections and impact',
-    benefits: ['Expand reach', 'Increase effectiveness', 'Build partnerships'],
-    href: '/nonprofits'
+    description: 'Strategic consulting and professional speaking services',
+    benefits: ['Strategic organizational consulting', 'Keynote speaking engagements', 'Custom training programs'],
+    href: '/services/consulting'
+  },
+  {
+    title: 'Event Organizers',
+    icon: Heart,
+    description: 'Professional speaking for conferences and events',
+    benefits: ['Keynote presentations', 'Workshop facilitation', 'Panel discussions'],
+    href: '/speaking'
   }
 ];
 

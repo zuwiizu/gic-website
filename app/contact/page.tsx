@@ -13,16 +13,9 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    details: 'hello@globalinsightscollective.com',
+    details: 'info@globalinsightscollective.com',
     description: 'Send us an email anytime',
-    href: 'mailto:hello@globalinsightscollective.com'
-  },
-  {
-    icon: Phone,
-    title: 'Phone',
-    details: '+1 (555) 123-4567',
-    description: 'Mon-Fri from 8am to 6pm EST',
-    href: 'tel:+15551234567'
+    href: 'mailto:info@globalinsightscollective.com'
   },
   {
     icon: MapPin,
@@ -43,11 +36,7 @@ const contactInfo = [
 const faqs = [
   {
     question: 'What types of organizations do you work with?',
-    answer: 'We work with universities, healthcare systems, employers, nonprofits, and public agencies of all sizes. Our approach is tailored to each organization\'s unique context and challenges.'
-  },
-  {
-    question: 'How quickly can you respond to a crisis situation?',
-    answer: 'We offer 24/7 crisis response services and can typically deploy our team within 2-4 hours for urgent situations. Our rapid response protocols ensure immediate support when you need it most.'
+    answer: 'We work with universities, corporations, and organizations of all sizes. Our approach is tailored to each organization\'s unique context and challenges.'
   },
   {
     question: 'Do you offer virtual training and consulting?',
@@ -55,11 +44,11 @@ const faqs = [
   },
   {
     question: 'What is your typical project timeline?',
-    answer: 'Project timelines vary based on scope and complexity. Training workshops can be delivered within 2-4 weeks, while comprehensive organizational assessments typically take 6-12 weeks. We work with your schedule and urgency.'
+    answer: 'Project timelines vary based on scope and complexity. Training workshops can be delivered within 2-4 weeks, while comprehensive consulting projects typically take 6-12 weeks. We work with your schedule and priorities.'
   },
   {
     question: 'How do you measure success?',
-    answer: 'We use evidence-based metrics including climate surveys, incident reporting data, retention rates, and satisfaction scores. Every engagement includes clear success metrics established upfront.'
+    answer: 'We use evidence-based metrics including engagement surveys, performance indicators, and satisfaction scores. Every engagement includes clear success metrics established upfront.'
   }
 ];
 
@@ -136,21 +125,7 @@ export default function ContactPage() {
                 })}
               </div>
 
-              {/* Emergency Contact */}
-              <div className="mt-8 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <h3 className="text-sm font-medium text-red-800 mb-2">
-                  Crisis Response
-                </h3>
-                <p className="text-sm text-red-700">
-                  For urgent situations requiring immediate support, call our 24/7 crisis line:
-                </p>
-                <Link
-                  href="tel:+15551234567"
-                  className="text-sm font-medium text-red-800 hover:text-red-900"
-                >
-                  +1 (555) 123-4567
-                </Link>
-              </div>
+
             </div>
           </div>
 

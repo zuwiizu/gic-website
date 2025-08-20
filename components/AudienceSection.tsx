@@ -4,60 +4,60 @@ import { GraduationCap, Building2, Heart, Users } from 'lucide-react';
 
 const audiences = [
   {
-    title: 'Universities',
+    title: 'International Students',
     icon: GraduationCap,
-    description: 'Create inclusive campuses where every student can thrive',
+    description: 'Supporting international students through their academic journey',
     outcomes: [
-      'Reduce bias incidents by up to 45%',
-      'Improve student retention rates',
-      'Enhance campus climate scores',
-      'Build stronger community connections'
+      'University admissions guidance',
+      'Application and visa support',
+      'Academic success strategies',
+      'Cultural adaptation assistance'
     ],
-    href: '/universities',
+    href: '/services/international-student-support',
     color: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
     iconColor: 'text-blue-600'
   },
   {
-    title: 'Employers',
+    title: 'Corporate Organizations',
     icon: Building2,
-    description: 'Build diverse teams and cultures that drive innovation',
+    description: 'Transform workplace culture and drive business performance',
     outcomes: [
-      'Attract and retain top talent',
-      'Increase employee engagement',
-      'Drive innovation and performance',
-      'Strengthen employer brand'
+      'Cultural competency training',
+      'Inclusive leadership development',
+      'Employee engagement improvement',
+      'Organizational transformation'
     ],
-    href: '/employers',
+    href: '/services/inclusive-workplace',
     color: 'bg-green-50 border-green-200 hover:bg-green-100',
     iconColor: 'text-green-600'
   },
   {
-    title: 'Healthcare & Public Safety',
-    icon: Heart,
-    description: 'Deliver equitable services to diverse communities',
-    outcomes: [
-      'Improve patient outcomes',
-      'Build community trust',
-      'Reduce health disparities',
-      'Enhance service delivery'
-    ],
-    href: '/healthcare-public-safety',
-    color: 'bg-red-50 border-red-200 hover:bg-red-100',
-    iconColor: 'text-red-600'
-  },
-  {
-    title: 'Community & Nonprofits',
+    title: 'Event Organizers',
     icon: Users,
-    description: 'Strengthen community connections and impact',
+    description: 'Professional speaking for conferences and corporate events',
     outcomes: [
-      'Expand community reach',
-      'Increase program effectiveness',
-      'Build strategic partnerships',
-      'Enhance cultural responsiveness'
+      'Keynote presentations',
+      'Interactive workshops',
+      'Panel discussions',
+      'Virtual presentations'
     ],
-    href: '/nonprofits',
+    href: '/speaking',
     color: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
     iconColor: 'text-purple-600'
+  },
+  {
+    title: 'All Organizations',
+    icon: Heart,
+    description: 'Strategic consulting and organizational development',
+    outcomes: [
+      'Strategic planning guidance',
+      'Organizational assessment',
+      'Change management support',
+      'Custom solution development'
+    ],
+    href: '/services/consulting',
+    color: 'bg-orange-50 border-orange-200 hover:bg-orange-100',
+    iconColor: 'text-orange-600'
   }
 ];
 

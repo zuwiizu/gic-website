@@ -35,12 +35,12 @@ const serviceSchema = {
 };
 
 export const metadata = {
-  title: 'Corporate Training & Team Development | Global Insights Collective',
-  description: 'Professional training programs that improve team performance, reduce turnover, and boost productivity through practical skills development.',
-  keywords: 'corporate training, team development, leadership training, workplace communication, professional development, business training',
+  title: 'Corporate Training & Cultural Competency | Global Insights Collective',
+  description: 'Professional training programs including cultural competency, leadership development, and workplace transformation that improve performance and reduce turnover.',
+  keywords: 'corporate training, cultural competency training, leadership development, workplace culture, diversity training, professional development',
   openGraph: {
-    title: 'Corporate Training That Gets Results',
-    description: 'Practical training programs that improve team performance and reduce turnover.',
+    title: 'Corporate Training & Cultural Competency Services',
+    description: 'Transform your workplace culture with proven training programs and cultural competency development.',
   }
 };
 
@@ -64,11 +64,11 @@ export default function InclusiveWorkplace() {
             Corporate Training & Strategy Consulting
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
-            Training programs, keynote speaking, strategic consulting, and leadership development that drives real business results.
+            Training programs, keynote speaker services, strategic consulting, and leadership development that drives real business results.
           </p>
           <div className="flex justify-center gap-8 mb-6 text-sm text-gray-600">
             <span>Corporate training</span>
-            <span>Keynote speaking</span>
+            <span>Keynote speaker</span>
             <span>Strategy consulting</span>
           </div>
           <Button asChild>
@@ -76,29 +76,81 @@ export default function InclusiveWorkplace() {
           </Button>
         </section>
 
-        {/* Common Challenges */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Common Team Performance Challenges
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+        {/* Challenges & Solutions */}
+        <section className="mb-16">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Challenges */}
             <div>
-              <ul className="space-y-3 text-gray-700">
-                <li>• Poor communication causing project delays</li>
-                <li>• Leadership skills gaps affecting team performance</li>
-                <li>• High turnover and difficulty retaining talent</li>
-                <li>• Conflicts and low team morale</li>
-                <li>• Lack of clear performance standards</li>
-              </ul>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Common Workplace Challenges
+              </h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4 p-4 bg-red-50 rounded-lg border-l-4 border-red-400">
+                  <div className="flex-shrink-0 w-2 h-2 bg-red-400 rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Communication Breakdowns</h3>
+                    <p className="text-gray-600 text-sm">Poor communication causing project delays and misaligned expectations</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4 p-4 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+                  <div className="flex-shrink-0 w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Leadership Gaps</h3>
+                    <p className="text-gray-600 text-sm">Skills gaps in leadership affecting overall team performance and direction</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                  <div className="flex-shrink-0 w-2 h-2 bg-yellow-400 rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">High Turnover</h3>
+                    <p className="text-gray-600 text-sm">Difficulty retaining top talent and maintaining institutional knowledge</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4 p-4 bg-purple-50 rounded-lg border-l-4 border-purple-400">
+                  <div className="flex-shrink-0 w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Low Team Morale</h3>
+                    <p className="text-gray-600 text-sm">Workplace conflicts and unclear performance standards affecting productivity</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* Solutions */}
             <div>
-              <h3 className="font-semibold mb-3">Training Benefits:</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Improved team productivity and efficiency</li>
-                <li>• Better leadership and management skills</li>
-                <li>• Reduced turnover and recruitment costs</li>
-                <li>• Enhanced workplace communication</li>
-              </ul>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Our Solutions Deliver Results
+              </h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4 p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
+                  <div className="flex-shrink-0 w-2 h-2 bg-green-400 rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Enhanced Productivity</h3>
+                    <p className="text-gray-600 text-sm">Improved team efficiency and streamlined communication processes</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+                  <div className="flex-shrink-0 w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Stronger Leadership</h3>
+                    <p className="text-gray-600 text-sm">Developed management skills and confident decision-making capabilities</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-400">
+                  <div className="flex-shrink-0 w-2 h-2 bg-indigo-400 rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Reduced Costs</h3>
+                    <p className="text-gray-600 text-sm">Lower turnover rates and decreased recruitment and training expenses</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4 p-4 bg-teal-50 rounded-lg border-l-4 border-teal-400">
+                  <div className="flex-shrink-0 w-2 h-2 bg-teal-400 rounded-full mt-2"></div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Better Communication</h3>
+                    <p className="text-gray-600 text-sm">Clear, effective workplace communication and collaborative team dynamics</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -181,7 +233,9 @@ export default function InclusiveWorkplace() {
                 <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-600 mr-2" />Leadership development</li>
                 <li className="flex items-center"><CheckCircle className="h-4 w-4 text-purple-600 mr-2" />Policy and process redesign</li>
               </ul>
-              <Button className="w-full">Start Transformation</Button>
+              <Button asChild className="w-full">
+                <Link href="/contact">Start Transformation</Link>
+              </Button>
             </div>
 
             {/* Leadership Coaching */}
@@ -207,7 +261,9 @@ export default function InclusiveWorkplace() {
                 <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-2" />Performance management skills</li>
                 <li className="flex items-center"><CheckCircle className="h-4 w-4 text-green-500 mr-2" />Change leadership techniques</li>
               </ul>
-              <Button variant="outline" className="w-full">Executive Program</Button>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/contact">Get Started</Link>
+              </Button>
             </div>
 
             {/* Rapid Assessment */}
@@ -233,7 +289,9 @@ export default function InclusiveWorkplace() {
                 <li className="flex items-center"><CheckCircle className="h-4 w-4 text-blue-500 mr-2" />Benchmarking analysis</li>
                 <li className="flex items-center"><CheckCircle className="h-4 w-4 text-blue-500 mr-2" />Quick-win identification</li>
               </ul>
-              <Button variant="outline" className="w-full">Get Assessment</Button>
+              <Button asChild variant="outline" className="w-full">
+                <Link href="/contact">Get Assessment</Link>
+              </Button>
             </div>
           </div>
         </section>
