@@ -30,20 +30,20 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-3 mb-4">
+            <Link href="/" className="flex items-center space-x-3 mb-2">
               <Image
                 src="/logo.png"
                 alt="Global Insights Collective"
-                width={180}
-                height={60}
-                className="h-8 w-auto"
+                width={400}
+                height={100}
+                className="h-24 w-auto"
               />
             </Link>
-            <p className="text-gray-600 mb-6 max-w-md">
+            <p className="text-gray-600 mb-4 max-w-md text-sm">
               Championing inclusive communities across campuses and workplaces through evidence-based training,
               strategic consulting, and cultural competency development.
             </p>

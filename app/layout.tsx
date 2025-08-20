@@ -48,6 +48,11 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/3.png',
+    shortcut: '/3.png',
+    apple: '/3.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
