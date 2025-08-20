@@ -16,64 +16,44 @@ import {
 
 const services = [
   {
-    title: "Cultural Competency Training",
-    description: "Interactive workshops that build empathy, enhance communication, and develop strategies for inclusive environments.",
+    title: "Customized Workshops",
+    description: "Transform your team dynamics with our signature workshops. We craft immersive learning experiences that break down cultural barriers, spark meaningful dialogue, and equip your people with practical tools for inclusive collaboration.",
     icon: Users,
     href: "/services/cultural-competency",
-    features: ["Faculty & staff training", "Student workshops", "Leadership development"],
-    duration: "Half-day to multi-day programs",
-    delivery: ["In-person", "Virtual", "Hybrid"],
-    outcomes: ["Increased cultural awareness", "Improved communication skills", "Reduced bias incidents"]
+    features: ["Higher education institutions", "Healthcare systems", "Corporate teams", "Government agencies & NGOs"],
+    duration: "Half-day intensives to multi-day transformations",
+    delivery: ["In-person immersion", "Virtual facilitation", "Hybrid experiences"],
+    outcomes: ["Measurable behavior change", "Stronger team cohesion", "Reduced conflict incidents"]
   },
   {
-    title: "International Student Support",
-    description: "Comprehensive crisis response and ongoing support systems for international student populations.",
+    title: "Training Programs",
+    description: "Develop your organization's cultural intelligence through our comprehensive training curricula. Address the real challenges of cultural adjustment, workplace belonging, and psychological safety with evidence-based methodologies.",
     icon: Globe,
     href: "/services/international-student-support",
-    features: ["Crisis intervention", "24/7 support systems", "Cultural navigation"],
-    duration: "Ongoing support with rapid response",
-    delivery: ["On-site", "Remote", "Emergency response"],
-    outcomes: ["Faster crisis resolution", "Improved student wellbeing", "Enhanced support systems"]
-  },
-  {
-    title: "Inclusive Workplace Programs",
-    description: "Custom programs that foster belonging and drive innovation in hybrid and remote work environments.",
-    icon: Building,
-    href: "/services/inclusive-workplace",
-    features: ["DEI strategy", "Team building", "Policy development"],
-    duration: "3-12 month engagements",
-    delivery: ["Strategic consulting", "Training programs", "Policy review"],
-    outcomes: ["Increased engagement", "Better retention", "Stronger culture"]
-  },
-  {
-    title: "Crisis Response & Mediation",
-    description: "Expert intervention and mediation services for bias incidents and cultural conflicts.",
-    icon: AlertTriangle,
-    href: "/services/crisis-response",
-    features: ["Rapid response", "Conflict mediation", "Restorative justice"],
-    duration: "Immediate to 6-week resolution",
-    delivery: ["Emergency response", "Mediation sessions", "Follow-up support"],
-    outcomes: ["Faster resolution", "Restored relationships", "Prevented escalation"]
-  },
-  {
-    title: "Assessment & Evaluation",
-    description: "Data-driven climate assessments and program evaluation to measure impact and guide strategy.",
-    icon: BarChart3,
-    href: "/services/assessment",
-    features: ["Campus climate surveys", "Impact measurement", "Strategic planning"],
-    duration: "2-6 month projects",
-    delivery: ["Survey design", "Data analysis", "Report presentation"],
-    outcomes: ["Clear baseline data", "Actionable insights", "Progress tracking"]
+    features: ["Cultural navigation mastery", "Inclusive leadership development", "Well-being & resilience building", "Crisis prevention & response"],
+    duration: "Modular programs with sustained impact",
+    delivery: ["Expert-led sessions", "Peer learning circles", "Digital learning platforms"],
+    outcomes: ["Higher retention rates", "Improved performance metrics", "Enhanced organizational reputation"]
   },
   {
     title: "Strategic Consulting",
-    description: "Long-term partnerships to develop and implement comprehensive inclusion strategies.",
+    description: "Navigate complexity with confidence. Our consultants become your embedded partners, helping you decode cultural dynamics, streamline communication, and architect environments where inclusion isn't just policy—it's practice.",
+    icon: Building,
+    href: "/services/inclusive-workplace",
+    features: ["Organizational culture assessment", "Communication systems optimization", "Inclusive practice design", "Change management support"],
+    duration: "3-18 month strategic partnerships",
+    delivery: ["Executive advisory", "Implementation coaching", "Continuous optimization"],
+    outcomes: ["Sustained cultural transformation", "Competitive advantage", "Industry leadership recognition"]
+  },
+  {
+    title: "Keynote Speaking",
+    description: "Ignite change with presentations that move beyond awareness to action. Ismail Warsame delivers keynotes that combine compelling storytelling with actionable frameworks your audience can implement immediately.",
     icon: Lightbulb,
     href: "/services/consulting",
-    features: ["Strategic planning", "Policy review", "Implementation support"],
-    duration: "6-24 month partnerships",
-    delivery: ["Executive coaching", "Strategic planning", "Change management"],
-    outcomes: ["Comprehensive strategy", "Sustainable change", "Organizational transformation"]
+    features: ["Cross-cultural mastery insights", "Inclusion strategy frameworks", "Leadership transformation stories", "Change catalyst methodologies"],
+    duration: "45-90 minute transformative experiences",
+    delivery: ["Dynamic in-person presentations", "Interactive virtual sessions", "Thought-provoking panel discussions"],
+    outcomes: ["Inspired action-taking", "Clear implementation roadmaps", "Energized change champions"]
   }
 ];
 
@@ -94,11 +74,12 @@ export default function ServicesPage() {
       {/* Header */}
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Our Services
+          Transform Your Organization
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          From training and assessment to crisis response and strategic consulting,
-          we provide comprehensive solutions for building inclusive communities.
+          Partner with Global Insights Collective to build workplaces and learning environments 
+          where every individual thrives. Our proven methodologies drive measurable results 
+          in cultural competence, inclusion, and organizational resilience.
         </p>
         <Button asChild size="lg">
           <Link href="/contact">Discuss Your Needs</Link>
@@ -195,18 +176,23 @@ export default function ServicesPage() {
       {/* Custom Solutions */}
       <section className="bg-gray-50 rounded-2xl p-8 lg:p-12 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Need a Custom Solution?
+          Ready to Lead the Change?
         </h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Every organization is unique. We work with you to design programs
-          that address your specific challenges and goals.
+        <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+          Join forward-thinking organizations that choose excellence in inclusion. 
+          Every engagement is tailored to your unique challenges, cultural context, and strategic goals.
+          <strong className="block mt-2 text-gray-700">Because transformation isn't one-size-fits-all.</strong>
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="bg-white rounded-lg p-6 mb-8 max-w-md mx-auto">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact for Consultation</h3>
+          <div className="space-y-2 text-gray-700">
+            <p><strong>Phone:</strong> 207-766-8538</p>
+            <p><strong>Email:</strong> i.warsame@globalinsightscollective.com</p>
+          </div>
+        </div>
+        <div className="flex justify-center">
           <Button asChild size="lg">
             <Link href="/contact">Schedule a Consultation</Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link href="/case-studies">See Our Success Stories</Link>
           </Button>
         </div>
       </section>

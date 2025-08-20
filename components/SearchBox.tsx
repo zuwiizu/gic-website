@@ -25,24 +25,7 @@ const searchData: SearchResult[] = [
     url: '/services/crisis-response',
     type: 'service'
   },
-  {
-    title: 'University Crisis Response Case Study',
-    excerpt: 'How we helped a major university manage an international student crisis with 100% retention.',
-    url: '/case-studies/university-crisis-response',
-    type: 'case-study'
-  },
-  {
-    title: 'About Global Insights Collective',
-    excerpt: 'Learn about our mission, approach, and the team behind Global Insights Collective.',
-    url: '/about',
-    type: 'page'
-  },
-  {
-    title: 'Building Inclusive Communities',
-    excerpt: 'Evidence-based strategies for creating lasting organizational change and inclusive environments.',
-    url: '/insights/building-inclusive-communities',
-    type: 'insight'
-  }
+
 ];
 
 interface SearchBoxProps {
@@ -183,7 +166,7 @@ export function SearchBox({ className = "", placeholder = "Search..." }: SearchB
               <Search className="h-8 w-8 mx-auto mb-2 text-gray-300" />
               <p className="text-sm">No results found for "{query}"</p>
               <p className="text-xs text-gray-400 mt-1">
-                Try different keywords or browse our services and insights
+                Try different keywords or browse our services
               </p>
             </div>
           )}

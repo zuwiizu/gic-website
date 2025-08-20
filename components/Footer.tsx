@@ -17,8 +17,7 @@ const footerNavigation = {
   ],
   company: [
     { name: 'About', href: '/about' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Insights', href: '/insights' },
+
     { name: 'Speaking & Media', href: '/speaking' },
     { name: 'Contact', href: '/contact' },
   ],

@@ -1,9 +1,10 @@
 import Hero from '../components/Hero';
 import AudienceSection from '../components/AudienceSection';
 import ServicesGrid from '../components/ServicesGrid';
-import CaseStudySpotlight from '../components/CaseStudySpotlight';
-import InsightsPreview from '../components/InsightsPreview';
+
 import { FeaturedVideo } from '../components/YouTubeEmbed';
+import { StructuredData } from '../components/StructuredData';
+import { organizationSchema, serviceSchema } from '../lib/structured-data-schemas';
 
 export const metadata = {
   title: 'Global Insights Collective | Inclusive Communities Across Campuses & Workplaces',
@@ -13,6 +14,8 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <StructuredData data={organizationSchema} />
+      <StructuredData data={serviceSchema} />
       <Hero />
 
       {/* Trust/Proof Band - Following NN/g B2B guidelines */}
@@ -46,7 +49,7 @@ export default function Home() {
 
       <AudienceSection />
       <ServicesGrid />
-      <CaseStudySpotlight />
+
 
       {/* Featured Video Section */}
       <section className="py-20 bg-gray-50">
@@ -67,7 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      <InsightsPreview />
+
     </>
   );
 }

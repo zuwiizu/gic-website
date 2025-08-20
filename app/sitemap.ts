@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-import { getAllInsights, getAllCaseStudies } from '../lib/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://globalinsightscollective.com';
@@ -24,18 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/case-studies`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/insights`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
+
     {
       url: `${baseUrl}/speaking`,
       lastModified: new Date(),
@@ -112,33 +100,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic pages - insights
-  let insightPages: MetadataRoute.Sitemap = [];
-  try {
-    const insights = getAllInsights();
-    insightPages = insights.map((insight) => ({
-      url: `${baseUrl}/insights/${insight.slug}`,
-      lastModified: new Date(insight.date),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }));
-  } catch (error) {
-    console.warn('Could not load insights for sitemap:', error);
-  }
-
-  // Dynamic pages - case studies
-  let caseStudyPages: MetadataRoute.Sitemap = [];
-  try {
-    const caseStudies = getAllCaseStudies();
-    caseStudyPages = caseStudies.map((caseStudy) => ({
-      url: `${baseUrl}/case-studies/${caseStudy.slug}`,
-      lastModified: new Date(caseStudy.date),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }));
-  } catch (error) {
-    console.warn('Could not load case studies for sitemap:', error);
-  }
-
-  return [...staticPages, ...insightPages, ...caseStudyPages];
+  return [...staticPages];
 }

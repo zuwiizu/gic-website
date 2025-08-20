@@ -34,11 +34,11 @@ export function Breadcrumbs() {
     
     // Custom labels for specific paths
     const customLabels: Record<string, string> = {
-      'case-studies': 'Case Studies',
+
       'speaking': 'Speaking & Media',
       'about': 'About Us',
       'contact': 'Contact',
-      'insights': 'Insights',
+
       'services': 'Services',
       'industries': 'Industries'
     };
@@ -111,11 +111,11 @@ export function CompactBreadcrumbs() {
     .join(' ');
   
   const customLabels: Record<string, string> = {
-    'case-studies': 'Case Studies',
+
     'speaking': 'Speaking & Media',
     'about': 'About Us',
     'contact': 'Contact',
-    'insights': 'Insights',
+
     'services': 'Services',
     'industries': 'Industries'
   };

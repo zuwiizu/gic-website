@@ -70,18 +70,7 @@ export default function Header() {
               >
                 Who We Help
               </Link>
-              <Link 
-                href="/case-studies"
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm px-2 py-1"
-              >
-                Case Studies
-              </Link>
-              <Link 
-                href="/insights"
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm px-2 py-1"
-              >
-                Insights
-              </Link>
+
               <Link 
                 href="/about"
                 className="text-sm font-medium text-gray-700 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm px-2 py-1"
@@ -163,20 +152,7 @@ export default function Header() {
                 >
                   Who We Help
                 </Link>
-                <Link 
-                  href="/case-studies"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-                  onClick={() => setOpen(false)}
-                >
-                  Case Studies
-                </Link>
-                <Link 
-                  href="/insights"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-                  onClick={() => setOpen(false)}
-                >
-                  Insights
-                </Link>
+
                 <Link 
                   href="/about"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
