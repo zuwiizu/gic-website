@@ -235,4 +235,4 @@ For support and questions:
 - [Radix UI](https://radix-ui.com/) for accessible components
 - [Cloudflare](https://cloudflare.com/) for hosting and security
 - [shadcn/ui](https://ui.shadcn.com/) for beautiful components
-# Trigger deployment with correct build command
+# Trigger deployment with web-vitals fix - 2025-08-20
