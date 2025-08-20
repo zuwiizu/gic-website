@@ -6,7 +6,8 @@ import {
   Building,
   AlertTriangle,
   BarChart3,
-  Lightbulb
+  Lightbulb,
+  Shield
 } from 'lucide-react';
 
 const services = [
@@ -20,9 +21,16 @@ const services = [
   {
     title: 'Enterprise Risk Management',
     description: 'Strategic risk management programs for aviation, marine, transportation, and business operations. Proven frameworks used by major infrastructure organizations and federal projects.',
+    icon: Shield,
+    href: '/services/enterprise-risk-management',
+    features: ['Business continuity planning', 'Federal program management', 'Infrastructure risk assessment']
+  },
+  {
+    title: 'Corporate Services',
+    description: 'Workplace transformation programs that attract top talent, reduce turnover, and boost innovation through strategic culture development and leadership coaching.',
     icon: Building,
     href: '/services/inclusive-workplace',
-    features: ['Business continuity planning', 'Federal program management', 'Infrastructure risk assessment']
+    features: ['Culture development', 'Leadership coaching', 'Performance improvement']
   },
   {
     title: 'Strategic Consulting',
@@ -48,7 +56,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
