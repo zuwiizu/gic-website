@@ -56,8 +56,8 @@ export default function EnterpriseRiskManagementPage() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/case-studies">
-                View Case Studies
+              <Link href="/about">
+                Learn About Us
               </Link>
             </Button>
           </div>
@@ -249,16 +249,11 @@ export default function EnterpriseRiskManagementPage() {
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Get a comprehensive risk assessment from proven ERM professionals with real infrastructure experience.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button asChild size="lg" variant="secondary">
               <Link href="/contact">
                 Schedule Risk Assessment
                 <Shield className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <Link href="/case-studies">
-                View Our Results
               </Link>
             </Button>
           </div>

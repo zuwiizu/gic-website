@@ -250,7 +250,7 @@ export default function AboutPage() {
           <Button asChild size="lg" variant="secondary">
             <Link href="/contact">Start a Conversation</Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-600">
+          <Button asChild size="lg" variant="secondary" className="bg-white text-brand-600 hover:bg-gray-100">
             <Link href="/services">Explore Our Services</Link>
           </Button>
         </div>

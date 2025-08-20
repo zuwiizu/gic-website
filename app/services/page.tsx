@@ -117,7 +117,7 @@ export default function Services() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+            <Button asChild size="lg" variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100">
               <Link href="/about">
                 Learn About Our Approach
               </Link>

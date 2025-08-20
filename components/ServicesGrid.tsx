@@ -120,9 +120,9 @@ export default function ServicesGrid() {
                   Book a Consultation
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-600">
-                <Link href="/case-studies">
-                  See Our Results
+              <Button asChild size="lg" variant="secondary" className="bg-white text-brand-600 hover:bg-gray-100">
+                <Link href="/services">
+                  View All Services
                 </Link>
               </Button>
             </div>

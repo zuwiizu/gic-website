@@ -12,7 +12,6 @@ const footerNavigation = {
   resources: [
     { name: 'Who We Help', href: '/who-we-help' },
     { name: 'All Services', href: '/services' },
-    { name: 'Community Engagement', href: '/services/community-engagement' },
   ],
   company: [
     { name: 'About', href: '/about' },
@@ -119,6 +118,7 @@ export default function Footer() {
             <p className="text-sm text-gray-600">
               &copy; {new Date().getFullYear()} Global Insights Collective. All rights reserved.
             </p>
+            {/* Legal links hidden until pages are created
             <div className="mt-4 md:mt-0 flex space-x-6">
               <Link
                 href="/privacy"
@@ -139,6 +139,7 @@ export default function Footer() {
                 Accessibility
               </Link>
             </div>
+            */}
           </div>
         </div>
       </div>
