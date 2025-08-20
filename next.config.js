@@ -13,8 +13,8 @@ const nextConfig = {
         hostname: '**',
       },
     ],
-    loader: 'custom',
-    loaderFile: './lib/cloudflare-image-loader.ts',
+    // For static exports, we need to disable optimization
+    unoptimized: true,
   },
   async headers() {
     return [

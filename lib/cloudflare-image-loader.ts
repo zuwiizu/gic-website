@@ -22,8 +22,8 @@ export default function cloudflareImageLoader({
   // If it's a relative path, make it absolute
   const absoluteSrc = src.startsWith('/') ? src : `/${src}`;
 
-  // In development, serve images directly without Cloudflare transformation
-  if (process.env.NODE_ENV === 'development') {
+  // For static exports or development, serve images directly without transformation
+  if (process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_STATIC_EXPORT === 'true') {
     return absoluteSrc;
   }
 
