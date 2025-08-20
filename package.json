@@ -45,7 +45,8 @@
     "reading-time": "^1.5.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "web-vitals": "^3.5.2"
   },
   "devDependencies": {
     "@axe-core/cli": "^4.8.2",
@@ -58,7 +59,6 @@
     "eslint-config-next": "^15.4.6",
     "lighthouse": "^11.4.0",
     "puppeteer": "^21.6.1",
-    "wait-on": "^7.2.0",
-    "web-vitals": "^3.5.2"
+    "wait-on": "^7.2.0"
   }
 }
