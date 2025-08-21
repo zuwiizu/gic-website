@@ -46,25 +46,29 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold mb-4">Proven Track Record</h2>
-            <p className="text-lg opacity-90">Real results from real expertise</p>
+            <h2 className="text-3xl font-bold mb-4">Proven Track Record</h2>
+            <p className="text-lg opacity-90">Measurable results across diverse sectors</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">Decades</div>
-              <div className="text-sm opacity-90">Higher Ed Experience</div>
+            <div className="text-center bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+              <div className="text-4xl font-bold mb-2">10+</div>
+              <div className="text-sm opacity-90">Years Experience</div>
+              <div className="text-xs opacity-75 mt-1">Higher Education & Risk Management</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">Port</div>
-              <div className="text-sm opacity-90">Major Infrastructure Client</div>
+            <div className="text-center bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+              <div className="text-4xl font-bold mb-2">Major</div>
+              <div className="text-sm opacity-90">Infrastructure Clients</div>
+              <div className="text-xs opacity-75 mt-1">Port Authority • Universities</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">PMP®</div>
-              <div className="text-sm opacity-90">Certified Project Management</div>
+            <div className="text-center bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+              <div className="text-4xl font-bold mb-2">M.Ed. + PMP®</div>
+              <div className="text-sm opacity-90">Dual Certification</div>
+              <div className="text-xs opacity-75 mt-1">Academic Excellence & Project Leadership</div>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white/10 rounded-xl p-6 backdrop-blur-sm">
               <div className="text-4xl font-bold mb-2">Global</div>
-              <div className="text-sm opacity-90">International Speaking</div>
+              <div className="text-sm opacity-90">Speaking Expertise</div>
+              <div className="text-xs opacity-75 mt-1">International Conferences & Cultural Insight</div>
             </div>
           </div>
         </div>

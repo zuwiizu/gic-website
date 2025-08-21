@@ -94,9 +94,12 @@ export default function EnterpriseRiskManagementPage() {
 
         {/* Core Services */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our ERM Services
           </h2>
+          <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
+            Risk Training & Compliance Consulting - Workshops tailored for corporations, nonprofits, and international organizations, providing practical strategies to strengthen governance, regulatory alignment, and organizational resilience.
+          </p>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Business Continuity Planning */}

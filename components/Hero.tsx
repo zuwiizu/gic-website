@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-16">
         <div className="max-w-2xl">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-5xl">
-            Enterprise Risk Management, International Education & Strategic Consulting
+            Crisis Management, Risk & Compliance, International Education & Strategic Consulting
           </h1>
           <p className="mt-4 text-lg text-gray-700">
             Proven expertise serving <strong>major infrastructure organizations</strong>, <strong>universities</strong>, and <strong>international clients</strong>. M.Ed. and PMP® certified professionals delivering measurable results.

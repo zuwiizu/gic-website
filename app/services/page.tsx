@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '../../components/ui/button';
 import { Breadcrumb } from '../../components/ui/breadcrumb';
-import { Globe, Building, Users, ArrowRight } from 'lucide-react';
+import { Globe, Building, Users, ArrowRight, Shield, Lightbulb } from 'lucide-react';
 
 export const metadata = {
   title: 'Services | Global Insights Collective',
@@ -24,26 +24,45 @@ export default function Services() {
             Our Services
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Professional support in three key areas designed to create measurable impact for your organization
+            Professional support in four key areas designed to create measurable impact for your organization
           </p>
         </section>
 
-        {/* Core Services - Enhanced Grid */}
-        <section className="grid lg:grid-cols-2 gap-8 mb-16">
+        {/* All Services - Unified Grid */}
+        <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {/* International Students */}
           <Link href="/services/international-student-support" className="group">
-            <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
+            <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <div className="bg-blue-50 rounded-lg p-3 w-fit mb-6">
                 <Globe className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
                 International Student Support
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                 Comprehensive university admissions guidance, application support, and ongoing assistance for international students pursuing American higher education.
               </p>
               <div className="flex items-center text-blue-600 font-semibold transition-all">
-                Explore Services
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          </Link>
+
+          {/* Enterprise Risk Management */}
+          <Link href="/services/enterprise-risk-management" className="group">
+            <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-full flex flex-col">
+              <div className="bg-red-50 rounded-lg p-3 w-fit mb-6">
+                <Shield className="h-8 w-8 text-red-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 group-hover:text-red-600 transition-colors">
+                Enterprise Risk Management
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+                Strategic risk management programs for aviation, marine, transportation, and business operations. Proven frameworks used by major infrastructure organizations.
+              </p>
+              <div className="flex items-center text-red-600 font-semibold transition-all">
+                Learn More
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
@@ -51,54 +70,38 @@ export default function Services() {
 
           {/* Corporate Services */}
           <Link href="/services/inclusive-workplace" className="group">
-            <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
+            <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <div className="bg-green-50 rounded-lg p-3 w-fit mb-6">
                 <Building className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-green-600 transition-colors">
+              <h3 className="text-xl font-bold mb-4 group-hover:text-green-600 transition-colors">
                 Corporate Training & Cultural Competency
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                 Transform your workplace culture with inclusive leadership training, cultural competency development, and strategic consulting services that drive real business results.
               </p>
               <div className="flex items-center text-green-600 font-semibold transition-all">
-                Explore Services
+                Learn More
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           </Link>
-        </section>
 
-        {/* Additional Services - Secondary Row */}
-        <section className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Strategic Consulting */}
           <Link href="/services/consulting" className="group">
-            <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-bold mb-3 group-hover:text-indigo-600 transition-colors">
+            <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-full flex flex-col">
+              <div className="bg-indigo-50 rounded-lg p-3 w-fit mb-6">
+                <Lightbulb className="h-8 w-8 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 group-hover:text-indigo-600 transition-colors">
                 Strategic Consulting
               </h3>
-              <p className="text-gray-600 mb-4">
-                Expert strategic guidance for organizational transformation and sustainable culture change.
+              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+                Expert strategic guidance combining M.Ed. academic rigor with PMP® project management certification. Proven track record with major ports, universities, and international organizations.
               </p>
-              <div className="flex items-center text-indigo-600 font-medium transition-all">
+              <div className="flex items-center text-indigo-600 font-semibold transition-all">
                 Learn More
-                <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </div>
-          </Link>
-
-          {/* Speaking Engagements */}
-          <Link href="/speaking" className="group">
-            <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-bold mb-3 group-hover:text-orange-600 transition-colors">
-                Speaking Engagements
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Keynote speaking and conference presentations on leadership, cultural competency, and organizational transformation.
-              </p>
-              <div className="flex items-center text-orange-600 font-medium transition-all">
-                Learn More
-                <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           </Link>

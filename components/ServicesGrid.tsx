@@ -62,11 +62,11 @@ export default function ServicesGrid() {
             return (
               <div
                 key={service.title}
-                className="group bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover:shadow-xl hover:border-brand-200 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+                className="group bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover:shadow-xl hover:border-brand-200 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden h-full"
               >
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-50/0 to-blue-50/0 group-hover:from-brand-50/30 group-hover:to-blue-50/20 transition-all duration-300 rounded-xl"></div>
-                <div className="relative z-10">
+                <div className="relative z-10 h-full flex flex-col">
                 {/* Enhanced Icon */}
                 <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-200 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                   <IconComponent className="h-7 w-7 text-brand-600" />
@@ -82,7 +82,7 @@ export default function ServicesGrid() {
                 </p>
 
                 {/* Features */}
-                <div className="mb-6">
+                <div className="mb-6 flex-grow">
                   <ul className="space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-700">

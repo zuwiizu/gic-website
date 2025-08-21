@@ -14,6 +14,11 @@ const services = [
     description: 'University admissions guidance and support'
   },
   {
+    title: 'Enterprise Risk Management',
+    href: '/services/enterprise-risk-management',
+    description: 'Strategic risk management for critical infrastructure'
+  },
+  {
     title: 'Inclusive Workplace Programs',
     href: '/services/inclusive-workplace',
     description: 'Workplace transformation and culture development'
@@ -38,7 +43,10 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+      setServicesOpen(false); // Close services dropdown on scroll
+    };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);

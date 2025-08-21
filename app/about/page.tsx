@@ -84,12 +84,15 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="relative">
-            <div className="bg-gradient-to-br from-brand-50 to-blue-50 rounded-2xl p-8 h-96 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-12 w-12 text-white" />
-                </div>
-                <p className="text-gray-700 font-medium">
+            <div className="bg-gradient-to-br from-brand-50 to-blue-50 rounded-2xl p-8 h-96 flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                alt="Diverse group of professionals collaborating" 
+                className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+              />
+              <div className="relative z-10 text-center">
+                <p className="text-white font-bold text-xl drop-shadow-lg">
                   Building inclusive communities<br />
                   across campuses & workplaces
                 </p>
@@ -193,7 +196,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="text-center">
                 <Image
-                  src="/team/ismail-warsame.jpg"
+                  src="/team/ismail-warsame.png"
                   alt="Ismail Warsame"
                   width={200}
                   height={200}
