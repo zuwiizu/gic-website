@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Removed 'output: export' to enable API routes
-  // output: 'export',
+  output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  // distDir: 'out',
+  distDir: 'out',
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     formats: ['image/avif', 'image/webp'],

@@ -1,0 +1,3 @@
+name = "gic-contact-api"
+main = "src/index.js"
+compatibility_date = "2023-12-01"

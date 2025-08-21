@@ -80,7 +80,12 @@ export function ContactForm() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('/api/contact', {
+      // Use Cloudflare Worker endpoint for email API
+      const workerUrl = process.env.NODE_ENV === 'production' 
+        ? 'https://gic-contact-api.iwarsame8.workers.dev'
+        : 'http://localhost:8787';
+      
+      const response = await fetch(workerUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
