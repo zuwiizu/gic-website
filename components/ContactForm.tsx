@@ -100,7 +100,9 @@ export function ContactForm() {
         setFormData(initialFormData);
         announceToScreenReader('Your message has been sent successfully. We will get back to you within 24 hours.');
       } else {
-        throw new Error('Failed to send message');
+        const errorData = await response.json();
+        console.error('API Error:', errorData);
+        throw new Error(errorData.error || 'Failed to send message');
       }
     } catch (error) {
       setSubmitStatus('error');

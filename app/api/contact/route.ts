@@ -69,6 +69,12 @@ async function sendEmailNotification(data: ContactFormData): Promise<boolean> {
   const resendApiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.CONTACT_EMAIL || 'info@globalinsightscollective.com';
   
+  console.log('Email configuration:', {
+    hasResendKey: !!resendApiKey,
+    toEmail: toEmail,
+    keyLength: resendApiKey ? resendApiKey.length : 0
+  });
+  
   if (!resendApiKey) {
     console.error('RESEND_API_KEY not configured');
     return false;
@@ -146,6 +152,12 @@ Submitted on: ${new Date().toLocaleString()}
 export async function POST(request: NextRequest) {
   try {
     const data: ContactFormData = await request.json();
+    console.log('Contact form submission received:', { 
+      name: data.name, 
+      email: data.email, 
+      organization: data.organization,
+      hasMessage: !!data.message 
+    });
 
     // Validate required fields
     if (!data.name || !data.email || !data.message) {
@@ -187,6 +199,10 @@ export async function POST(request: NextRequest) {
     const emailSent = await sendEmailNotification(data);
     if (!emailSent) {
       console.warn('Failed to send email notification, but submission was stored');
+      return NextResponse.json(
+        { error: 'Email service not configured. Please contact us directly.' },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json(
