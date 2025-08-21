@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
 interface ContactFormData {
   name: string;
@@ -64,40 +65,80 @@ async function storeSubmission(data: ContactFormData): Promise<boolean> {
   return true;
 }
 
-async function sendNotification(data: ContactFormData): Promise<boolean> {
-  const webhookUrl = process.env.WEBHOOK_URL;
+async function sendEmailNotification(data: ContactFormData): Promise<boolean> {
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const toEmail = process.env.CONTACT_EMAIL || 'info@globalinsightscollective.com';
   
-  if (!webhookUrl) {
-    console.log('No webhook URL configured, skipping notification');
-    return true;
+  if (!resendApiKey) {
+    console.error('RESEND_API_KEY not configured');
+    return false;
   }
 
+  const resend = new Resend(resendApiKey);
+
   try {
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        text: `New contact form submission from ${data.name} (${data.email})`,
-        attachments: [
-          {
-            color: 'good',
-            fields: [
-              { title: 'Name', value: data.name, short: true },
-              { title: 'Email', value: data.email, short: true },
-              { title: 'Organization', value: data.organization, short: true },
-              { title: 'Service Interest', value: data.service || 'General inquiry', short: true },
-              { title: 'Message', value: data.message, short: false },
-            ],
-          },
-        ],
-      }),
+    const { data: emailData, error } = await resend.emails.send({
+      from: 'Global Insights Collective <noreply@globalinsightscollective.com>',
+      to: [toEmail],
+      subject: `New Contact Form Submission from ${data.name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #1f2937; border-bottom: 2px solid #3b82f6; padding-bottom: 10px;">
+            New Contact Form Submission
+          </h2>
+          
+          <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="color: #374151; margin-top: 0;">Contact Information</h3>
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+            <p><strong>Organization:</strong> ${data.organization}</p>
+            ${data.service ? `<p><strong>Service Interest:</strong> ${data.service}</p>` : ''}
+          </div>
+          
+          <div style="background: #ffffff; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+            <h3 style="color: #374151; margin-top: 0;">Message</h3>
+            <p style="white-space: pre-wrap; line-height: 1.6;">${data.message}</p>
+          </div>
+          
+          <div style="margin-top: 30px; padding: 20px; background: #dbeafe; border-radius: 8px;">
+            <p style="margin: 0; color: #1e40af;">
+              <strong>Next Steps:</strong> Reply to this email or contact ${data.name} directly at 
+              <a href="mailto:${data.email}">${data.email}</a>
+            </p>
+          </div>
+          
+          <footer style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 14px;">
+            <p>This email was sent from the Global Insights Collective contact form.</p>
+            <p>Submitted on: ${new Date().toLocaleString()}</p>
+          </footer>
+        </div>
+      `,
+      text: `
+New Contact Form Submission
+
+Name: ${data.name}
+Email: ${data.email}
+Organization: ${data.organization}
+${data.service ? `Service Interest: ${data.service}` : ''}
+
+Message:
+${data.message}
+
+Reply to this email or contact ${data.name} directly at ${data.email}
+
+Submitted on: ${new Date().toLocaleString()}
+      `
     });
 
-    return response.ok;
+    if (error) {
+      console.error('Failed to send email:', error);
+      return false;
+    }
+
+    console.log('Email sent successfully:', emailData?.id);
+    return true;
   } catch (error) {
-    console.error('Failed to send notification:', error);
+    console.error('Failed to send email notification:', error);
     return false;
   }
 }
@@ -107,7 +148,7 @@ export async function POST(request: NextRequest) {
     const data: ContactFormData = await request.json();
 
     // Validate required fields
-    if (!data.name || !data.email || !data.message || !data.turnstileToken) {
+    if (!data.name || !data.email || !data.message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -123,14 +164,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // TODO: Re-enable Turnstile verification when properly configured
     // Verify Turnstile token
-    const isValidToken = await verifyTurnstile(data.turnstileToken);
-    if (!isValidToken) {
-      return NextResponse.json(
-        { error: 'Security verification failed' },
-        { status: 400 }
-      );
-    }
+    // const isValidToken = await verifyTurnstile(data.turnstileToken);
+    // if (!isValidToken) {
+    //   return NextResponse.json(
+    //     { error: 'Security verification failed' },
+    //     { status: 400 }
+    //   );
+    // }
 
     // Store submission
     const stored = await storeSubmission(data);
@@ -141,10 +183,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Send notification
-    const notified = await sendNotification(data);
-    if (!notified) {
-      console.warn('Failed to send notification, but submission was stored');
+    // Send email notification
+    const emailSent = await sendEmailNotification(data);
+    if (!emailSent) {
+      console.warn('Failed to send email notification, but submission was stored');
     }
 
     return NextResponse.json(
