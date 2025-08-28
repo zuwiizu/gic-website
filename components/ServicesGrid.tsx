@@ -19,11 +19,11 @@ const services = [
     features: ['University admissions guidance', 'Crisis response systems', 'Compliance & policy development']
   },
   {
-    title: 'Enterprise Risk Management',
-    description: 'Strategic risk management programs for aviation, marine, transportation, and business operations. Proven frameworks used by major infrastructure organizations and federal projects.',
+    title: 'Risk Training & Compliance Consulting',
+    description: 'Workshops tailored for corporations, nonprofits, and international organizations, providing practical strategies to strengthen governance, regulatory alignment, and organizational resilience.',
     icon: Shield,
     href: '/services/enterprise-risk-management',
-    features: ['Business continuity planning', 'Federal program management', 'Infrastructure risk assessment']
+    features: ['Governance workshops', 'Regulatory compliance training', 'Organizational resilience strategies']
   },
   {
     title: 'Corporate Services',

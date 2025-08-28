@@ -19,8 +19,8 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Enterprise Risk Management | Global Insights Collective',
-  description: 'Strategic risk management programs for aviation, marine, transportation, and business operations. Proven frameworks used by major infrastructure organizations and federal projects.',
+  title: 'Risk Training & Compliance Consulting | Global Insights Collective',
+  description: 'Workshops tailored for corporations, nonprofits, and international organizations, providing practical strategies to strengthen governance, regulatory alignment, and organizational resilience.',
 };
 
 export default function EnterpriseRiskManagementPage() {
@@ -39,19 +39,18 @@ export default function EnterpriseRiskManagementPage() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-6">
             <Shield className="h-4 w-4 mr-2" />
-            Enterprise Risk Management
+            Risk Training & Compliance Consulting
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Strategic Risk Management for Critical Infrastructure
+            Strengthen Governance & Organizational Resilience
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Proven frameworks for aviation, marine, transportation, and business operations. 
-            Trusted by major infrastructure organizations and federal projects.
+            Workshops tailored for corporations, nonprofits, and international organizations, providing practical strategies to strengthen governance, regulatory alignment, and organizational resilience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">
               <Link href="/contact">
-                Get Risk Assessment
+                Schedule Workshop
                 <Shield className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -63,31 +62,26 @@ export default function EnterpriseRiskManagementPage() {
           </div>
         </div>
 
-        {/* Key Sectors */}
+        {/* Organizations We Serve */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Sectors We Serve
+            Organizations We Serve
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg transition-shadow">
-              <Plane className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Aviation</h3>
-              <p className="text-gray-600 text-sm">Airport operations, air traffic management, safety protocols</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg transition-shadow">
-              <Ship className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Marine</h3>
-              <p className="text-gray-600 text-sm">Port operations, shipping, maritime infrastructure</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg transition-shadow">
-              <Truck className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Transportation</h3>
-              <p className="text-gray-600 text-sm">Logistics, supply chain, ground transportation</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg transition-shadow">
               <Building className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Business Parks</h3>
-              <p className="text-gray-600 text-sm">Commercial real estate, tenant operations, facility management</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Corporations</h3>
+              <p className="text-gray-600 text-sm">Governance training, compliance frameworks, risk management workshops</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg transition-shadow">
+              <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Nonprofits</h3>
+              <p className="text-gray-600 text-sm">Board governance, regulatory compliance, organizational resilience</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg transition-shadow">
+              <Globe className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">International Organizations</h3>
+              <p className="text-gray-600 text-sm">Cross-border compliance, international governance standards</p>
             </div>
           </div>
         </section>
@@ -95,112 +89,112 @@ export default function EnterpriseRiskManagementPage() {
         {/* Core Services */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Our ERM Services
+            Our Training & Consulting Services
           </h2>
           <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">
             Risk Training & Compliance Consulting - Workshops tailored for corporations, nonprofits, and international organizations, providing practical strategies to strengthen governance, regulatory alignment, and organizational resilience.
           </p>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Business Continuity Planning */}
+            {/* Governance Workshops */}
             <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="bg-green-100 p-3 rounded-lg mr-4">
                   <Shield className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Business Continuity Planning</h3>
+                <h3 className="text-xl font-bold text-gray-900">Governance Workshops</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Comprehensive business continuity management programs that ensure operational resilience during disruptions.
+                Interactive workshops designed to strengthen organizational governance structures and decision-making processes.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-3" />
-                  <span>Business impact analysis</span>
+                  <span>Board governance training</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-3" />
-                  <span>Recovery strategy development</span>
+                  <span>Decision-making frameworks</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-3" />
-                  <span>Crisis communication plans</span>
+                  <span>Accountability structures</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-3" />
-                  <span>Testing and maintenance programs</span>
+                  <span>Policy development guidance</span>
                 </li>
               </ul>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/contact">Learn More</Link>
+                <Link href="/contact">Schedule Workshop</Link>
               </Button>
             </div>
 
-            {/* Federal Program Management */}
+            {/* Regulatory Compliance Training */}
             <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="bg-blue-100 p-3 rounded-lg mr-4">
                   <FileText className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Federal Program Management</h3>
+                <h3 className="text-xl font-bold text-gray-900">Regulatory Compliance Training</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Expert management of FEMA-funded and other federal programs with proven compliance and delivery track record.
+                Comprehensive training programs to ensure regulatory alignment and compliance across diverse organizational contexts.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-blue-500 mr-3" />
-                  <span>FEMA grant management</span>
+                  <span>Regulatory framework analysis</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-blue-500 mr-3" />
-                  <span>Federal compliance oversight</span>
+                  <span>Compliance system design</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-blue-500 mr-3" />
-                  <span>Program implementation</span>
+                  <span>Staff training programs</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-blue-500 mr-3" />
-                  <span>Reporting and documentation</span>
+                  <span>Monitoring and reporting</span>
                 </li>
               </ul>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/contact">Learn More</Link>
+                <Link href="/contact">Get Training</Link>
               </Button>
             </div>
 
-            {/* Infrastructure Risk Assessment */}
+            {/* Organizational Resilience Strategies */}
             <div className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="flex items-center mb-6">
                 <div className="bg-purple-100 p-3 rounded-lg mr-4">
                   <TrendingUp className="h-8 w-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Infrastructure Risk Assessment</h3>
+                <h3 className="text-xl font-bold text-gray-900">Organizational Resilience Strategies</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Comprehensive risk assessments for critical infrastructure including ports, airports, and transportation networks.
+                Strategic consulting to build organizational resilience and adaptive capacity for long-term sustainability.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-purple-500 mr-3" />
-                  <span>Vulnerability assessments</span>
+                  <span>Resilience assessments</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-purple-500 mr-3" />
-                  <span>Threat analysis</span>
+                  <span>Adaptive capacity building</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-purple-500 mr-3" />
-                  <span>Risk mitigation strategies</span>
+                  <span>Change management strategies</span>
                 </li>
                 <li className="flex items-center text-sm">
                   <CheckCircle className="h-4 w-4 text-purple-500 mr-3" />
-                  <span>Continuous monitoring</span>
+                  <span>Sustainability planning</span>
                 </li>
               </ul>
               <Button asChild variant="outline" className="w-full">
-                <Link href="/contact">Learn More</Link>
+                <Link href="/contact">Build Resilience</Link>
               </Button>
             </div>
           </div>
