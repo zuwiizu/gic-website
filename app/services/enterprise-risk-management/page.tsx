@@ -29,7 +29,7 @@ export default function EnterpriseRiskManagementPage() {
       <Breadcrumb
         items={[
           { label: 'Services', href: '/services' },
-          { label: 'Enterprise Risk Management' }
+          { label: 'Risk Training & Compliance Consulting' }
         ]}
         className="bg-white border-b border-gray-200"
       />

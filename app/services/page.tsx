@@ -49,14 +49,14 @@ export default function Services() {
             </div>
           </Link>
 
-          {/* Enterprise Risk Management */}
+          {/* Risk Training & Compliance Consulting */}
           <Link href="/services/enterprise-risk-management" className="group">
             <div className="bg-white rounded-xl border border-gray-200 p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 h-full flex flex-col">
               <div className="bg-red-50 rounded-lg p-3 w-fit mb-6">
                 <Shield className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-xl font-bold mb-4 group-hover:text-red-600 transition-colors">
-                Enterprise Risk Management
+                Risk Training & Compliance Consulting
               </h3>
               <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                 Strategic risk management programs for aviation, marine, transportation, and business operations. Proven frameworks used by major infrastructure organizations.

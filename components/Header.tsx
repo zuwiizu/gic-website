@@ -14,7 +14,7 @@ const services = [
     description: 'University admissions guidance and support'
   },
   {
-    title: 'Enterprise Risk Management',
+    title: 'Risk Training & Compliance Consulting',
     href: '/services/enterprise-risk-management',
     description: 'Strategic risk management for critical infrastructure'
   },

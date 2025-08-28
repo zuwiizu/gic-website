@@ -18,7 +18,7 @@ import {
 
 export const metadata = {
   title: 'Global Insights Collective | Global Thinking, Human Solutions',
-  description: 'Global Thinking, Human Solutions. M.Ed. and PMP® certified professionals delivering enterprise risk management, international education support, and strategic consulting.',
+  description: 'Global Thinking, Human Solutions. M.Ed. and PMP® certified professionals delivering risk training & compliance consulting, international education support, and strategic consulting.',
   openGraph: {
     title: 'Global Insights Collective',
     description: 'Global Thinking, Human Solutions.',
@@ -92,10 +92,10 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      Enterprise Risk Management
+                      Risk Training & Compliance Consulting
                     </h3>
                     <p className="text-gray-600">
-                      Proven frameworks managing aviation, marine, and business operations for major infrastructure organizations.
+                      Workshops for corporations, nonprofits, and international organizations to strengthen governance and regulatory alignment.
                     </p>
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export default function Home() {
                 Oregon RIMS Speaker
               </h3>
               <p className="text-gray-600 mb-4">
-                Featured presenter on Enterprise Risk Management
+                Featured presenter on Risk Training & Compliance Consulting
               </p>
               <div className="text-sm text-blue-600 font-medium">
                 Strategic Risk Leadership
