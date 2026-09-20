@@ -163,7 +163,7 @@ export default function InclusiveWorkplace() {
           <div className="grid md:grid-cols-4 gap-6">
             <div className="border border-gray-200 p-4">
               <h3 className="font-semibold mb-2">Corporate Training</h3>
-              <p className="text-sm text-gray-600 mb-3">Workshops and programs that develop your team's skills and performance.</p>
+              <p className="text-sm text-gray-600 mb-3">Workshops and programs that develop your team&apos;s skills and performance.</p>
               <ul className="text-xs text-gray-600 space-y-1">
                 <li>• Leadership development</li>
                 <li>• Communication skills</li>
@@ -386,7 +386,7 @@ export default function InclusiveWorkplace() {
               ))}
             </div>
             <blockquote className="text-lg text-gray-700 mb-4">
-              "Global Insights Collective helped us transform from a workplace where talented people left after 18 months to one where they build entire careers. Their data-driven approach showed us exactly where we were losing people and why. Now we're attracting candidates who turn down offers from our biggest competitors to work here instead."
+              &quot;Global Insights Collective helped us transform from a workplace where talented people left after 18 months to one where they build entire careers. Their data-driven approach showed us exactly where we were losing people and why. Now we&apos;re attracting candidates who turn down offers from our biggest competitors to work here instead.&quot;
             </blockquote>
             <cite className="text-gray-600">
               <strong>Jennifer Kim</strong>, Chief People Officer, InnovateTech Solutions
@@ -410,7 +410,7 @@ export default function InclusiveWorkplace() {
             </div>
             <div className="bg-white p-6 rounded-xl border border-gray-200">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                What's the ROI on workplace culture investment?
+                What&apos;s the ROI on workplace culture investment?
               </h3>
               <p className="text-gray-700">
                 Our clients typically see 300-500% ROI within 24 months through reduced turnover costs, improved productivity, and enhanced ability to attract top talent. The average organization saves $1.4M annually in turnover-related costs alone.
@@ -433,7 +433,7 @@ export default function InclusiveWorkplace() {
             Stop Losing Top Talent to Competitors
           </h2>
           <p className="text-xl mb-8 text-brand-50 max-w-3xl mx-auto">
-            In today's competitive talent market, workplace culture is your secret weapon. Organizations with strong cultures attract the best candidates and keep them longer—turning culture investment into competitive advantage.
+            In today&apos;s competitive talent market, workplace culture is your secret weapon. Organizations with strong cultures attract the best candidates and keep them longer—turning culture investment into competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button asChild size="lg" className="bg-white text-brand-600 hover:bg-gray-50">

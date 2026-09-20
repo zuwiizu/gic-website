@@ -211,7 +211,7 @@ export default function AboutPage() {
               
               <div className="md:col-span-2">
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Ismail is the visionary founder and CEO of Global Insights Collective, bringing over a decade of experience in international education, diversity and inclusion, and organizational development. With a Master's in Education (M.Ed.) and Project Management Professional (PMP) certification, he combines academic rigor with practical implementation expertise.
+                  Ismail is the visionary founder and CEO of Global Insights Collective, bringing over a decade of experience in international education, diversity and inclusion, and organizational development. With a Master&apos;s in Education (M.Ed.) and Project Management Professional (PMP) certification, he combines academic rigor with practical implementation expertise.
                 </p>
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Areas of Expertise</h4>
@@ -247,7 +247,7 @@ export default function AboutPage() {
           Ready to Create Change?
         </h2>
         <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-          Let's work together to build more inclusive communities where everyone can thrive.
+          Let&apos;s work together to build more inclusive communities where everyone can thrive.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" variant="secondary">

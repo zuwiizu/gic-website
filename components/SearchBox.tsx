@@ -164,7 +164,7 @@ export function SearchBox({ className = "", placeholder = "Search..." }: SearchB
           ) : (
             <div className="px-4 py-6 text-center text-gray-500">
               <Search className="h-8 w-8 mx-auto mb-2 text-gray-300" />
-              <p className="text-sm">No results found for "{query}"</p>
+              <p className="text-sm">No results found for &quot;{query}&quot;</p>
               <p className="text-xs text-gray-400 mt-1">
                 Try different keywords or browse our services
               </p>

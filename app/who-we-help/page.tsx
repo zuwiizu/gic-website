@@ -83,7 +83,7 @@ export default function WhoWeHelpPage() {
 
           <div className="mt-16 text-center">
             <h2 className="text-2xl font-semibold mb-4">Ready to create lasting change?</h2>
-            <p className="text-gray-700 mb-6">Let's discuss how we can help your organization build inclusive communities</p>
+            <p className="text-gray-700 mb-6">Let&apos;s discuss how we can help your organization build inclusive communities</p>
             <Button asChild size="lg">
               <Link href="/contact">
                 Start your journey <ArrowRight className="ml-2 h-4 w-4" />

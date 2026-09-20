@@ -156,7 +156,7 @@ export function ContactForm() {
             aria-describedby="email-help"
           />
           <p id="email-help" className="mt-1 text-xs text-gray-500">
-            We'll use this to respond to your inquiry
+            We&apos;ll use this to respond to your inquiry
           </p>
         </div>
       </div>
@@ -255,7 +255,7 @@ export function ContactForm() {
           <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-md flex items-center space-x-2">
             <CheckCircle className="h-5 w-5 text-green-600" />
             <span className="text-sm text-green-800">
-              Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+              Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
             </span>
           </div>
         )}

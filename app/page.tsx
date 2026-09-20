@@ -178,7 +178,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">Major Infrastructure</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                "Comprehensive ERM program covering aviation, marine operations, and business continuity. Professional expertise that delivers results."
+                &quot;Comprehensive ERM program covering aviation, marine operations, and business continuity. Professional expertise that delivers results.&quot;
               </p>
               <div className="text-sm text-brand-600 font-medium">Port Authority Client</div>
             </div>
@@ -189,7 +189,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">Higher Education</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                "Decades of exceptional crisis management, compliance oversight, and student success initiatives. Trusted partner for complex challenges."
+                &quot;Decades of exceptional crisis management, compliance oversight, and student success initiatives. Trusted partner for complex challenges.&quot;
               </p>
               <div className="text-sm text-brand-600 font-medium">Major State University</div>
             </div>
@@ -200,7 +200,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">International Relations</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                "Outstanding keynote presentation on maritime infrastructure. Professional expertise that commands international attention."
+                &quot;Outstanding keynote presentation on maritime infrastructure. Professional expertise that commands international attention.&quot;
               </p>
               <div className="text-sm text-brand-600 font-medium">Arab-Hellenic Chamber of Commerce</div>
             </div>

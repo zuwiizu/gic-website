@@ -73,7 +73,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to create more inclusive communities? Let's discuss how we can help your organization achieve meaningful, measurable change.
+            Ready to create more inclusive communities? Let&apos;s discuss how we can help your organization achieve meaningful, measurable change.
           </p>
         </div>
 

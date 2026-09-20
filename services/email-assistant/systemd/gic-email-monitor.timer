@@ -1,0 +1,8 @@
+[Unit]
+Description=Check Global Insights Collective email service every two minutes
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2min
+Unit=gic-email-monitor.service
+[Install]
+WantedBy=timers.target

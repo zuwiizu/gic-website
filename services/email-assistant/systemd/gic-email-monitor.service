@@ -1,0 +1,9 @@
+[Unit]
+Description=Global Insights Collective independent email delivery monitor
+[Service]
+Type=oneshot
+WorkingDirectory=/home/zuhurahmed/code/worktrees/gic-email-setup-20260920
+ExecStart=/home/zuhurahmed/.local/share/dr-ahmed-email-runtime/bin/python services/email-assistant/monitor.py
+Environment=PATH=/home/zuhurahmed/.local/bin:/usr/local/bin:/usr/bin:/bin
+UMask=0077
+TimeoutStartSec=180

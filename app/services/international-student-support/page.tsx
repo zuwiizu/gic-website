@@ -273,7 +273,7 @@ export default function InternationalStudentSupport() {
                 </div>
                 <div>
                   <p className="text-gray-200 italic mb-2">
-                    "Ismail's guidance was invaluable throughout my application process. I got accepted to my top choice university with a scholarship. His expertise in understanding both the American system and international student needs made all the difference."
+                    &quot;Ismail&apos;s guidance was invaluable throughout my application process. I got accepted to my top choice university with a scholarship. His expertise in understanding both the American system and international student needs made all the difference.&quot;
                   </p>
                   <p className="text-gray-400 text-sm">— Maria Rodriguez, Accepted to Stanford University</p>
                 </div>
@@ -297,7 +297,7 @@ export default function InternationalStudentSupport() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you guarantee university acceptance?</h3>
-                <p className="text-gray-600">While we can't guarantee acceptance, our strategic approach and expert guidance have resulted in a 95% acceptance rate for our students.</p>
+                <p className="text-gray-600">While we can&apos;t guarantee acceptance, our strategic approach and expert guidance have resulted in a 95% acceptance rate for our students.</p>
               </div>
             </div>
             <div className="space-y-6">

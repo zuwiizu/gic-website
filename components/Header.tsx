@@ -177,11 +177,8 @@ export default function Header() {
               "fixed inset-0 z-50 md:hidden transition-all duration-300",
               open ? "pointer-events-auto" : "pointer-events-none"
             )}
-            onClick={(e) => { 
-              if (e.target === e.currentTarget) setOpen(false); 
-            }}
           >
-            <div className={cn(
+            <button type="button" aria-label="Close menu" tabIndex={open ? 0 : -1} onClick={() => setOpen(false)} className={cn(
               "absolute inset-0 bg-black/30 transition-opacity duration-300",
               open ? "opacity-100" : "opacity-0"
             )} />

@@ -1,0 +1,16 @@
+[Unit]
+Description=Global Insights Collective owner email website assistant
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+WorkingDirectory=/home/zuhurahmed/code/worktrees/gic-email-setup-20260920
+ExecStart=/home/zuhurahmed/.local/share/dr-ahmed-email-runtime/bin/python services/email-assistant/worker.py run
+Environment=PATH=/home/zuhurahmed/.local/bin:/usr/local/bin:/usr/bin:/bin
+UMask=0077
+Restart=on-failure
+RestartSec=30
+TimeoutStopSec=15
+KillMode=control-group
+[Install]
+WantedBy=default.target

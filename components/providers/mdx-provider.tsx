@@ -15,7 +15,7 @@ const components = {
         className
       )}
       {...props}
-    />
+    >{props.children}</h1>
   ),
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
@@ -24,7 +24,7 @@ const components = {
         className
       )}
       {...props}
-    />
+    >{props.children}</h2>
   ),
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
@@ -33,7 +33,7 @@ const components = {
         className
       )}
       {...props}
-    />
+    >{props.children}</h3>
   ),
   h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h4
@@ -42,7 +42,7 @@ const components = {
         className
       )}
       {...props}
-    />
+    >{props.children}</h4>
   ),
   
   // Paragraphs and text
@@ -50,7 +50,7 @@ const components = {
     <p
       className={cn("leading-7 mb-6 text-gray-700", className)}
       {...props}
-    />
+    >{props.children}</p>
   ),
   
   // Lists
@@ -88,7 +88,7 @@ const components = {
         target="_blank"
         rel="noopener noreferrer"
         {...props}
-      />
+      >{props.children}</a>
     );
   },
   
@@ -100,7 +100,7 @@ const components = {
         className
       )}
       {...props}
-    />
+    >{props.children}</blockquote>
   ),
   
   // Code
@@ -111,7 +111,7 @@ const components = {
         className
       )}
       {...props}
-    />
+    >{props.children}</code>
   ),
   
   // Horizontal rule
@@ -137,13 +137,13 @@ const components = {
         className
       )}
       {...props}
-    />
+    >{props.children}</th>
   ),
   td: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <td
       className={cn("border border-gray-200 px-4 py-2 text-left", className)}
       {...props}
-    />
+    >{props.children}</td>
   ),
   
   // Custom components

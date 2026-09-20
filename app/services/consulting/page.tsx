@@ -226,7 +226,7 @@ export default function ConsultingPage() {
           <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-12">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Strategy?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              Get expert strategic guidance tailored to your organization's unique challenges and goals.
+              Get expert strategic guidance tailored to your organization&apos;s unique challenges and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100">

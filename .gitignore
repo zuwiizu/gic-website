@@ -8,3 +8,6 @@ dist/
 # Cloudflare Worker secrets
 workers/**/.dev.vars
 workers/**/.wrangler/
+*.tsbuildinfo
+__pycache__/
+*.pyc
