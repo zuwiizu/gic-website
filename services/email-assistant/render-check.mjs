@@ -11,6 +11,10 @@ try {
     for(const path of paths) {
       if(!/^\/(?:[a-z0-9-]+\/)*$/.test(path))throw new Error("Unexpected route");
       await browser.navigate(origin+path);
+      await browser.evaluate(`Promise.race([
+        Promise.all([...document.images].map(i=>{i.loading='eager';return i.decode().catch(()=>{});})),
+        new Promise(resolve=>setTimeout(resolve,12000))
+      ])`,true);
       const result=await browser.evaluate(`({overflow:document.documentElement.scrollWidth>innerWidth+2,
         h1:document.querySelectorAll('h1').length,
         brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).length,

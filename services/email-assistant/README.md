@@ -51,3 +51,29 @@ alternative and ask one clear question. It waits in `needs-information` without
 publishing. These editorial judgments remain model-based; owner preview approval
 and desktop/mobile checks remain necessary. No claim of foolproof visual judgment
 or factual verification is made.
+
+## GIC deployment notes
+
+The authenticated sender is exclusively `iwarsame8@gmail.com`; even the operator
+and the first website's owner cannot authorize a GIC update. Existing `info@`
+and `ismail.warsame@` forwarding rules are preserved. Services, transport stores
+and state are separate from the Dr. Ahmed deployment; the pinned Python runtime
+is shared read-only.
+
+Editable source is limited to existing `app/**/page.tsx` content pages (excluding
+API routes), `components/Hero.tsx` and `components/ServicesGrid.tsx`. Nested routes
+map to their actual public URLs. Existing unused MDX content is not an editing
+surface. Next.js checks and static export run from the exact request branch.
+
+Cloudflare Pages Git integration performs previews and production deployment.
+GitHub Actions validates lint, types and builds without a second deployment job.
+The existing contact API Worker remains the form's production backend. Preview
+noindex and security headers are supplied through `public/_headers` because
+Next.js custom response headers do not apply to a static export.
+
+The setup baseline was compared with the deployed website. Visible content was
+unchanged except for the build-time copyright year (2025 to 2026); Cloudflare's
+email obfuscation is decoded before content fingerprint comparison. Lint tooling
+was aligned with the installed Next.js version, existing JSX punctuation escaped
+without changing displayed text, and the mobile drawer backdrop made a labeled
+button. Existing image optimization warnings remain non-blocking.
